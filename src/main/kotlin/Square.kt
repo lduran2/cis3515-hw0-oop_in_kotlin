@@ -9,7 +9,7 @@ class Square (_name : String): Shape(_name){
 
     /**
      * The horizontal length of the square.
-     * It must be modified through setDimensions.
+     * It must be modified through `setDimensions`.
      * @see #setDimensions
      */
     var length = 0.0
