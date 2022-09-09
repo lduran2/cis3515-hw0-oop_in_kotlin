@@ -5,5 +5,5 @@
  * When      : 2022-09-09t17:18Q
  * For       : CIS3515/Intro to Mobile Application Development
  */
-class Circle: Shape("") {
+class Circle: Shape(""){
 }
