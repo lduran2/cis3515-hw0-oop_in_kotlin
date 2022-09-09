@@ -5,5 +5,5 @@
  * When      : 2022-09-09t18:43Q
  * For       : CIS3515/Intro to Mobile Application Development
  */
-open class Triangle: Shape(""){
+open class Triangle (_name : String): Shape(_name){
 }
