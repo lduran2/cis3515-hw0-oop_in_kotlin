@@ -1,4 +1,7 @@
 CHANGELOG :
+    v2.1.0 - 2022-09-09t17:19Q
+        [subclass] circle, triangle
+
     v2.0.1 - 2022-09-09t15:46Q
         [subclass] square default name constructor
 
