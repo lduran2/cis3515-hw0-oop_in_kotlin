@@ -5,5 +5,5 @@
  * When      : 2022-09-09t15:42Q
  * For       : CIS3515/Intro to Mobile Application Development
  */
-class Square: Shape {
+class Square: Shape("") {
 }
