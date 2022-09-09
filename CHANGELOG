@@ -1,4 +1,7 @@
 CHANGELOG :
+    v4.0.0 - 2022-09-09t18:40Q
+        [implements] constructors for child classes
+
     v2.2.0 - 2022-09-09t17:25Q
         [subclass] equilateral triangle, standard space, square doc
 
