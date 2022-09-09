@@ -1,4 +1,10 @@
 CHANGELOG :
+    v1.2.1 - 2022-09-09t15:46Q
+        [subclass] square default name constructor
+
+    v1.2.0 - 2022-09-09t15:42Q
+        [subclass] started square
+
     v1.1.0 - 2022-09-06t01:06Q
         [shape] implemented shape
 
