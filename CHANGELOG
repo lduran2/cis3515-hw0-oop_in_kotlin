@@ -1,5 +1,8 @@
 CHANGELOG :
-    v1.2.0 - 2022-09-09t15:52Q
+    v3.0.0 - 2022-09-09t18:26Q
+        [print_dimensions] implemented
+
+    v1.1.1 - 2022-09-09t15:52Q
         [shape] abstract class
 
     v1.1.0 - 2022-09-06t01:06Q
