@@ -2,6 +2,18 @@ CHANGELOG :
     v3.0.0 - 2022-09-09t18:26Q
         [print_dimensions] implemented
 
+    v2.2.0 - 2022-09-09t17:25Q
+        [subclass] equilateral triangle, standard space, square doc
+
+    v2.1.0 - 2022-09-09t17:19Q
+        [subclass] circle, triangle
+
+    v2.0.1 - 2022-09-09t15:46Q
+        [subclass] square default name constructor
+
+    v2.0.0 - 2022-09-09t15:42Q
+        [subclass] started square
+
     v1.1.1 - 2022-09-09t15:52Q
         [shape] abstract class
 
