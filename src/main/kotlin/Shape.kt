@@ -2,10 +2,10 @@
  * Canonical : https://github.com/lduran2/cis3515-hw0-oop_in_kotlin/blob/dev/src/main/kotlin/Shape.kt
  * Represents a shape taking up an area in two dimensions.
  * By        : Leomar Durán <https://github.com/lduran2>
- * When      : 2022-09-06t01:06Q
+ * When      : 2022-09-09t15:52Q
  * For       : CIS3515/Intro to Mobile Application Development
  */
-class Shape (_name : String): Dimensionable{
+abstract class Shape (_name : String): Dimensionable{
     /** name referring to this shape */
     var name = _name
 
