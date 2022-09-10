@@ -11,8 +11,11 @@ CHANGELOG :
     v4.0.0 - 2022-09-09t18:40Q
         [implements] ctors for child classes
 
+    v3.1.0 - 2022-09-10t15:04Q
+        [print_dimensions] added dimensionsToString
+
     v3.0.0 - 2022-09-09t18:26Q
-        [print_dimensions] implemented
+        [print_dimensions] added printDimensions
 
     v2.2.1 - 2022-09-09t18:43Q
         [subclass] equilateral extends triangle
