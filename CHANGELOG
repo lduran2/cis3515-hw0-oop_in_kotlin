@@ -1,4 +1,7 @@
 CHANGELOG :
+    v4.4.0 - 2022-09-10t17:01Q
+        [tests] tb for triangle.dimensions, fix TbCircle
+
     v4.3.1 - 2022-09-10t16:34Q
         [tests] tb for circle.dimensions, fix TbSquare
 

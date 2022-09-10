@@ -7,7 +7,7 @@ import kotlin.math.PI
  * Canonical : https://github.com/lduran2/cis3515-hw0-oop_in_kotlin/blob/dev/src/test/kotlin/TbCircle.kt
  * Tests the name and dimension accessors of the dimensions of the circle.
  * By        : Leomar Durán <https://github.com/lduran2>
- * When      : 2022-09-10t16:34Q
+ * When      : 2022-09-10t16:53Q
  * For       : CIS3515/Intro to Mobile Application Development
  */
 class TbCircle {
@@ -42,7 +42,7 @@ class TbCircle {
      */
     @Test
     fun testDimensions1(){
-        /* create a square */
+        /* create a circle */
         val circle = Circle(CIRCLE_NAME)
         /* set the dimensions */
         circle.setDimensions(CIRCLE1_RADIUS)
@@ -56,7 +56,7 @@ class TbCircle {
      */
     @Test
     fun testDimensions2(){
-        /* create a square */
+        /* create a circle */
         val circle = Circle(CIRCLE_NAME)
         /* set the initial dimensions */
         circle.setDimensions(CIRCLE1_RADIUS)
@@ -66,15 +66,15 @@ class TbCircle {
         assertEquals(CIRCLE2_DIMENSIONS, circle.dimensionsToString())
     } /* end fun testDimensions2() */
 
-} /* end class TbSquare */
+} /* end class TbCircle */
 
-/** test square name */
+/** test circle name */
 const val CIRCLE_NAME = "circle P"
 /** radius of test circle */
 const val CIRCLE1_RADIUS = 1.0
 /** expected string representation of test circle */
-const val CIRCLE1_DIMENSIONS = "radius = 3.1416e+00"
+const val CIRCLE1_DIMENSIONS = "radius = 1.0000e+00"
 /** radius of another test circle */
 val CIRCLE2_RADIUS = pow(PI, (-1.0/2.0))
 /** expected string representation of another test circle */
-const val CIRCLE2_DIMENSIONS = "radius = 1.0000e+00"
+const val CIRCLE2_DIMENSIONS = "radius = 5.6419e-01"
