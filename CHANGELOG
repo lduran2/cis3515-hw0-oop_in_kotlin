@@ -1,4 +1,7 @@
 CHANGELOG :
+    v4.3.0 - 2022-09-10t16:07Q
+        [tests] testbench for square, up to dimensions
+
     v4.2.0 - 2022-09-09t23:53Q
         [implements] setDimensions: EquilateralTriangle
 
