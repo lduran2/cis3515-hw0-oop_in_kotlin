@@ -33,7 +33,7 @@ class Square (_name : String): Shape(_name){
     } /* end fun setDimensions(_length : Double, _height : Double) */
 
     override fun dimensionsToString() : String{
-        return "length = 0.0000e+00, height = 0.0000e+00"
+        return "length = ${this.length}, height = ${this.height}"
     }
 
 } /* end class Square */
