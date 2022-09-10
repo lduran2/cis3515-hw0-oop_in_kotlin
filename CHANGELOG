@@ -1,4 +1,7 @@
 CHANGELOG :
+    v4.1.0 - 2022-09-09t23:17Q
+        [implements] setDimensions: square, circle, triangle
+
     v4.0.1 - 2022-09-09t18:52Q
         [implements] ctor for equilateral
 
