@@ -1,4 +1,7 @@
 CHANGELOG :
+    v4.5.0 - 2022-09-10t17:23Q
+        [tests] tb for equilateral triangle.dimensions
+
     v4.4.0 - 2022-09-10t17:01Q
         [tests] tb for triangle.dimensions, fix TbCircle
 

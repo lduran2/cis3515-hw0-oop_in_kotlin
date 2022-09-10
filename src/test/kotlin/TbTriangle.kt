@@ -1,7 +1,5 @@
 import org.junit.Test
 import kotlin.test.assertEquals
-import java.lang.Math.pow
-import kotlin.math.PI
 
 /**
  * Canonical : https://github.com/lduran2/cis3515-hw0-oop_in_kotlin/blob/dev/src/test/kotlin/TbTriangle.kt
