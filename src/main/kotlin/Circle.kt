@@ -14,7 +14,6 @@ class Circle (_name : String): Shape(_name){
      * @see #setDimensions
      */
     var radius = 0.0
-        private set(_double){}
 
     /**
      * Updates the radius of this circle.
@@ -23,5 +22,13 @@ class Circle (_name : String): Shape(_name){
     fun setDimensions(_radius : Double){
         this.radius = _radius
     } /* end fun setDimensions(_radius : Double) */
+
+    /**
+     * Represents the dimensions of this circle as a string.
+     * @return the string representation
+     */
+    override fun dimensionsToString() : String{
+        return ""
+    } /* end fun dimensionsToString() */
 
 } /* end class Circle */
