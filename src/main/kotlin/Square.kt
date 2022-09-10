@@ -21,7 +21,6 @@ class Square (_name : String): Shape(_name){
      * @see #setDimensions
      */
     var height = 0.0
-        private set(_double){}
 
     /**
      * Updates the horizontal and vertical lengths of this square.
@@ -32,5 +31,9 @@ class Square (_name : String): Shape(_name){
         this.length = _length
         this.height = _height
     } /* end fun setDimensions(_length : Double, _height : Double) */
+
+    override fun dimensionsToString() : String{
+        return ""
+    }
 
 } /* end class Square */
