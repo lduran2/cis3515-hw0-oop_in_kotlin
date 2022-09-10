@@ -28,7 +28,7 @@ class Circle (_name : String): Shape(_name){
      * @return the string representation
      */
     override fun dimensionsToString() : String{
-        return ""
+        return "radius = 0.0000e+00"
     } /* end fun dimensionsToString() */
 
 } /* end class Circle */
