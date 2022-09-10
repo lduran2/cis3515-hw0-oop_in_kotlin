@@ -39,6 +39,20 @@ class TbSquare{
 
     /**
      * Tests the dimension mutator and `dimensionsToString` of a
+     * vacuous square.
+     */
+    @Test
+    fun testDimensions0(){
+        /* create a square */
+        val square = Square(consts.NAME)
+        /* set the dimensions */
+        square.setDimensions(consts.LENGTH0, consts.HEIGHT0)
+        /* check the dimensions */
+        assertEquals(consts.DIMENSIONS0, square.dimensionsToString())
+    } /* end fun testDimensions0() */
+
+    /**
+     * Tests the dimension mutator and `dimensionsToString` of a
      * regular square.
      */
     @Test
@@ -75,6 +89,12 @@ class TbSquare{
 object TbSquareConsts{
     /** test square name */
     const val NAME = "square ABCD"
+    /** length and height of test vacuous square */
+    const val LENGTH0 = 0.0
+    const val HEIGHT0 = 0.0
+    /** expected string representation of test regular square's
+     * dimensions */
+    const val DIMENSIONS0 = "length = 0.0000e+00, height = 0.0000e+00"
     /** length and height of test regular square */
     const val LENGTH1 = 10.0
     const val HEIGHT1 = 10.0
