@@ -6,7 +6,7 @@
 
     <artifactId>cis3515-hw0-oop_in_kotlin</artifactId>
     <groupId>edu.temple.tuh24865</groupId>
-    <version>3.0.0</version>
+    <version>3.1.0</version>
     <packaging>jar</packaging>
 
     <name>consoleApp</name>

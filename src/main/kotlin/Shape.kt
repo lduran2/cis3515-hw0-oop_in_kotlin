@@ -17,4 +17,20 @@ abstract class Shape (_name : String): Dimensionable{
         return 0.0
     } /* end class getArea() */
 
+    /**
+     * Prints the dimensions of this shape.
+     * Delegates to `print` and `dimensionsToString`.
+     * @see #dimensionsToString
+     */
+    override fun printDimensions() {
+        print(dimensionsToString())
+    } /* end fun printDimensions() */
+
+    /**
+     * Represents the dimensions of this dimensionable object as a
+     * string.
+     * @return the string representation
+     */
+    abstract fun dimensionsToString() : String;
+
 } /* end class Shape */
