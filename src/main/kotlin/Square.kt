@@ -13,7 +13,6 @@ class Square (_name : String): Shape(_name){
      * @see #setDimensions
      */
     var length = 0.0
-        private set(_double){}
 
     /**
      * The vertical length of the square.
