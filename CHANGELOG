@@ -1,4 +1,10 @@
 CHANGELOG :
+    v4.5.2 - 2022-09-10t18:15Q
+        [tests] vacuous shape tests
+
+    v4.5.1 - 2022-09-10t18:01Q
+        [tests] consts mv -> object
+
     v4.5.0 - 2022-09-10t17:23Q
         [tests] tb for equilateral triangle.dimensions
 
