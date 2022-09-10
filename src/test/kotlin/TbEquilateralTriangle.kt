@@ -6,7 +6,7 @@ import java.lang.Math.pow
  * Canonical : https://github.com/lduran2/cis3515-hw0-oop_in_kotlin/blob/dev/src/test/kotlin/TbEquilateralTriangle.kt
  * Tests the name and dimension accessors of the dimensions of the equilateral triangle.
  * By        : Leomar Durán <https://github.com/lduran2>
- * When      : 2022-09-10t18:01Q
+ * When      : 2022-09-10t18:15Q
  * For       : CIS3515/Intro to Mobile Application Development
  */
 class TbEquilateralTriangle {
@@ -40,6 +40,20 @@ class TbEquilateralTriangle {
 
     /**
      * Tests the dimension mutator and `dimensionsToString` of a
+     * vacuous triangle.
+     */
+    @Test
+    fun testDimensions0(){
+        /* create a triangle */
+        val triangle = EquilateralTriangle(consts.NAME)
+        /* set the dimensions */
+        triangle.setDimensions(consts.SIDES_LENGTH0)
+        /* check the dimensions */
+        assertEquals(consts.DIMENSIONS0, triangle.dimensionsToString())
+    } /* end fun testDimensions0() */
+
+    /**
+     * Tests the dimension mutator and `dimensionsToString` of a
      * triangle.
      */
     @Test
@@ -49,8 +63,7 @@ class TbEquilateralTriangle {
         /* set the dimensions */
         triangle.setDimensions(consts.SIDES_LENGTH1)
         /* check the dimensions */
-        assertEquals(
-            consts.DIMENSIONS1, triangle.dimensionsToString())
+        assertEquals(consts.DIMENSIONS1, triangle.dimensionsToString())
     } /* end fun testDimensions1() */
 
     /**
@@ -66,8 +79,7 @@ class TbEquilateralTriangle {
         /* update the dimensions */
         triangle.setDimensions(consts.SIDES_LENGTH2)
         /* check the dimensions */
-        assertEquals(
-            consts.DIMENSIONS2, triangle.dimensionsToString())
+        assertEquals(consts.DIMENSIONS2, triangle.dimensionsToString())
     } /* end fun testDimensions2() */
 
 } /* end class TbEquilateralTriangle */
@@ -78,6 +90,11 @@ class TbEquilateralTriangle {
 object TbEquilateralTriangleConsts{
     /** test triangle name */
     const val NAME = "triangle ABC"
+    /** sides of a test vacuous triangle */
+    const val SIDES_LENGTH0 = 0.0
+    /** expected string representation of test vacuous triangle */
+    const val DIMENSIONS0 =
+        "side #1 = 0.0000e+00, side #2 = 0.0000e+00, side #3 = 0.0000e+00"
     /** sides of a test regular triangle */
     const val SIDES_LENGTH1 = 1.0
     /** expected string representation of test triangle */
