@@ -7,7 +7,7 @@ import kotlin.math.PI
  * Canonical : https://github.com/lduran2/cis3515-hw0-oop_in_kotlin/blob/dev/src/test/kotlin/TbCircle.kt
  * Tests the name and dimension accessors of the dimensions of the circle.
  * By        : Leomar Durán <https://github.com/lduran2>
- * When      : 2022-09-10t17:48Q
+ * When      : 2022-09-10t18:06Q
  * For       : CIS3515/Intro to Mobile Application Development
  */
 class TbCircle{
@@ -38,6 +38,20 @@ class TbCircle{
         /* check the name */
         assertEquals(consts.NAME, circle.name)
     } /* end fun testSetName() */
+
+    /**
+     * Tests the dimension mutator and `dimensionsToString` of a
+     * vacuous circle.
+     */
+    @Test
+    fun testDimensions0(){
+        /* create a circle */
+        val circle = Circle(consts.NAME)
+        /* set the dimensions */
+        circle.setDimensions(consts.RADIUS0)
+        /* check the dimensions */
+        assertEquals(consts.DIMENSIONS0, circle.dimensionsToString())
+    } /* end fun testDimensions0() */
 
     /**
      * Tests the dimension mutator and `dimensionsToString` of a
@@ -77,6 +91,10 @@ class TbCircle{
 object TbCircleConsts{
     /** test circle name */
     const val NAME = "circle P"
+    /** radius of test vacuous circle */
+    const val RADIUS0 = 0.0
+    /** expected string representation of test vacuous circle */
+    const val DIMENSIONS0 = "radius = 0.0000e+00"
     /** radius of test circle */
     const val RADIUS1 = 1.0
     /** expected string representation of test circle */
