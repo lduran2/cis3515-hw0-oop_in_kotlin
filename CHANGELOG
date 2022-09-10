@@ -1,4 +1,7 @@
 CHANGELOG :
+    v4.3.1 - 2022-09-10t16:34Q
+        [tests] tb for circle.dimensions, fix TbSquare
+
     v4.3.0 - 2022-09-10t16:07Q
         [tests] testbench for square, up to dimensions
 
