@@ -37,7 +37,7 @@ open class Triangle: Shape{
      * @param index : Int = of the side
      * @return magnitude of the side
      */
-    fun getSide(index : Int) : Double{
+    open fun getSide(index : Int) : Double{
         checkSideIndex(index)
         /* return magnitude of the corresponding side if within bounds */
         return this.sides[index]
@@ -59,14 +59,14 @@ open class Triangle: Shape{
 
     /**
      * Updates the sides of this triangle.
-     * @param _s1 : Double = side #1
-     * @param _s2 : Double = side #2
-     * @param _s3 : Double = side #3
+     * @param _s1 : Double = new magnitude of side #1
+     * @param _s2 : Double = new magnitude of side #2
+     * @param _s3 : Double = new magnitude of side #3
      */
     fun setDimensions(_s1 : Double, _s2 : Double, _s3 : Double){
-        sides[0] = _s1
-        sides[1] = _s2
-        sides[2] = _s3
+        this.sides[0] = _s1
+        this.sides[1] = _s2
+        this.sides[2] = _s3
     } /* end fun setDimensions(_s1 : Double, _s2 : Double, _s3 : Double) */
 
 } /* end class Triangle */

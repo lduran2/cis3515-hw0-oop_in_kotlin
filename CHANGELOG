@@ -1,4 +1,7 @@
 CHANGELOG :
+    v4.2.0 - 2022-09-09t23:53Q
+        [implements] setDimensions: EquilateralTriangle
+
     v4.1.0 - 2022-09-09t23:17Q
         [implements] setDimensions: square, circle, triangle
 
