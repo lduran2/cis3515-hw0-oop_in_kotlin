@@ -59,9 +59,9 @@ open class Triangle: Shape{
     } /* end fun getSide(index : Int) : Double */
 
     override fun dimensionsToString() : String{
-        return ("side #1 = ${this.getSideUnsafe(0)}000e+00, " +
-                "side #2 = ${this.getSideUnsafe(1)}000e+00, " +
-                "side #3 = ${this.getSideUnsafe(2)}000e+00")
+        return ("side #1 = ${"%.4e".format(this.getSideUnsafe(0))}, " +
+                "side #2 = ${"%.4e".format(this.getSideUnsafe(1))}, " +
+                "side #3 = ${"%.4e".format(this.getSideUnsafe(2))}")
     } /* end fun dimensionsToString() */
 
     /**
