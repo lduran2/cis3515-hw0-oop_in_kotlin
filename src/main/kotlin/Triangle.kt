@@ -1,4 +1,5 @@
 import java.lang.StringBuilder
+import kotlin.math.sqrt
 
 /**
  * Canonical : https://github.com/lduran2/cis3515-hw0-oop_in_kotlin/blob/dev/src/main/kotlin/Triangle.kt
@@ -120,12 +121,31 @@ open class Triangle: Shape{
     } /* end fun getSide(index : Int) : Double */
 
     /**
-     * Calculates the perimeter of this triangle.
+     * Finds the area of this triangle.
+     * @return the area of this triangle
+     */
+    override fun getArea() : Double{
+        val s = (this.getPerimeter() / 2)       /* semi-perimeter */
+        return sqrt(
+            /* for each side */
+            (0 until TriangleConsts.N_SIDES)
+                /* map (s - si) */
+                .map{s - this.getSideUnsafe(it)}
+                /* multiply altogether, initially semi-perimeter */
+                .reduce{s, el -> (s * el)}
+        ) /* end sqrt */
+    } /* end fun getArea() */
+
+    /**
+     * Finds the perimeter of this triangle.
      * @return the perimeter of this triangle
      */
     fun getPerimeter() : Double{
-        return 0.0
-    } /* end fun getPerimeter() : Double */
+        /* find the sum of each side */
+        return (0 until TriangleConsts.N_SIDES)
+            .map{this.getSideUnsafe(it)}
+            .sum()
+    } /* end fun getPerimeter() */
 
 } /* end class Triangle */
 
