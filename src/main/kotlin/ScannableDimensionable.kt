@@ -1,5 +1,5 @@
+import java.util.Scanner
 import java.io.PrintWriter
-import java.util.*
 
 /**
  * Canonical : https://github.com/lduran2/cis3515-hw0-oop_in_kotlin/blob/dev/src/main/kotlin/ScannableDimensionable.kt
