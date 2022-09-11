@@ -10,8 +10,8 @@ class Circle (_name : String): Shape(_name){
     /**
      * The distance between the central point and any point on the
      * circle.
-     * It must be modified through `setDimensions`.
      * @see #setDimensions
+     * @see #printDimensions
      */
     var radius = 0.0
 
