@@ -105,6 +105,4 @@ object TbEquilateralTriangleConsts{
     /** expected string representation of the 3-4-5 triangle */
     const val DIMENSIONS2 =
         "side #1 = 1.5197e+00, side #2 = 1.5197e+00, side #3 = 1.5197e+00"
-    /** the maximum allowable difference between calculated areas */
-    const val ABSOLUTE_TOLERANCE = 0.00005
 } /* end object TbEquilateralTriangleConsts */
