@@ -80,4 +80,3 @@ object TriangleConsts {
      */
     const val N_SIDES = 3
 } /* end object TriangleConsts */
-
