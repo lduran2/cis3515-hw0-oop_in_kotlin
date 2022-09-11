@@ -212,6 +212,7 @@ class TbTriangle{
 object TbTriangleConsts{
     /** test triangle name */
     const val NAME = "triangle ABC"
+
     /** sides of a test vacuous triangle */
     val SIDES0 = doubleArrayOf(0.0, 0.0, 0.0)
     /** expected string representation of test vacuous triangle */
@@ -221,6 +222,7 @@ object TbTriangleConsts{
     const val PERIMETER0 = 0.0
     /** expected area of test vacuous triangle */
     const val AREA0 = 0.0
+
     /** sides of a test regular triangle */
     val SIDES1 = doubleArrayOf(1.0, 1.0, 1.0)
     /** expected string representation of test regular triangle */
@@ -230,6 +232,7 @@ object TbTriangleConsts{
     const val PERIMETER1 = 3.0
     /** expected area of test regular triangle */
     const val AREA1 = 4.3301e-01
+
     /** sides of the 3-4-5 triangle */
     val SIDES345 = doubleArrayOf(3.0, 4.0, 5.0)
     /** expected string representation of the 3-4-5 triangle */
@@ -239,6 +242,8 @@ object TbTriangleConsts{
     const val PERIMETER345 = 12.0
     /** expected area of the 3-4-5 triangle */
     const val AREA345 = 6.0000
+
     /** the maximum allowable difference between calculated areas */
     const val ABSOLUTE_TOLERANCE = 0.00005
+
 } /* end object TbTriangleConsts */
