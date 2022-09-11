@@ -5,7 +5,7 @@ import java.io.PrintWriter
  * Canonical : https://github.com/lduran2/cis3515-hw0-oop_in_kotlin/blob/dev/src/main/kotlin/Square.kt
  * A shape with 4 equal sides.
  * By        : Leomar Durán <https://github.com/lduran2>
- * When      : 2022-09-10t19:06Q
+ * When      : 2022-09-11t18:10Q
  * For       : CIS3515/Intro to Mobile Application Development
  */
 class Square (_name : String): Shape(_name){
@@ -44,8 +44,7 @@ class Square (_name : String): Shape(_name){
     } /* end fun dimensionsToString() */
 
     /**
-     * Prints a prompt to the output stream, then scans in new
-     * dimensions from input.
+     * Prints prompts for length and height, scanning them from input.
      * @param sc : Scanner = from which to scan new dimensions
      * @param out : PrintWriter = to which to print prompts for input
      */
