@@ -14,9 +14,6 @@ class TbEquilateralTriangle{
     /** the object holding the testing constants */
     private val consts = TbEquilateralTriangleConsts
 
-    /** the object holding the testing constants */
-    private val consts = TbEquilateralTriangleConsts
-
     /**
      * Tests the constructor and name accessor.
      */
