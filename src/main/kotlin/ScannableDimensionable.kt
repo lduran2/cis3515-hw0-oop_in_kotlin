@@ -14,9 +14,9 @@ interface ScannableDimensionable : Dimensionable {
     /**
      * Prints a prompt to the output stream, then scans in new
      * dimensions from input.
-     * @param out : PrintWriter = to which to print prompts for input
      * @param sc : Scanner = from which to scan new dimensions
+     * @param out : PrintWriter = to which to print prompts for input
      */
-    fun scanDimensions(out : PrintWriter, sc : Scanner);
+    fun scanDimensionsFrom(sc : Scanner, out : PrintWriter);
 
 } /* end interface ScannableDimensionable */
