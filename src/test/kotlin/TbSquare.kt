@@ -28,3 +28,23 @@ class TbSquare{
     } /* end fun fail() */
 
 } /* end class TbSquare */
+
+/**
+ * Holds the constants for test benching squares.
+ */
+object TbSquareConsts{
+    /** test square name */
+    const val NAME = "square ABCD"
+    /** length and height of test regular square */
+    const val LENGTH1 = 10.0
+    const val HEIGHT1 = 10.0
+    /** expected string representation of test regular square's
+     * dimensions */
+    const val DIMENSIONS1 = "length = 1.0000e+01, height = 1.0000e+01"
+    /** length and height of test irregular square */
+    const val LENGTH2 = 8.0
+    const val HEIGHT2 = 12.0
+    /** expected string representation of test irregular square's
+     * dimensions */
+    const val DIMENSIONS2 = "length = 8.0000e+00, height = 1.2000e+01"
+} /* end object TbSquareConsts */
