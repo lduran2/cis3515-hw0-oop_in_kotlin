@@ -12,8 +12,9 @@ class EquilateralTriangle (_name : String): Triangle(_name, DoubleArray(1)){
      * All three sides are equal in magnitude.
      */
     override fun getSideUnsafe(index : Int) : Double{
-        /* all sides stored at 0 */
-        return this.getSideUnsafe(0)
+        /* all sides stored at 0,
+         * so call super class to get size 0 */
+        return super.getSideUnsafe(0)
     } /* end fun getSide(index : Int) : Double */
 
     /**
