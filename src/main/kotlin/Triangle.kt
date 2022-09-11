@@ -5,7 +5,7 @@ import kotlin.math.sqrt
  * Canonical : https://github.com/lduran2/cis3515-hw0-oop_in_kotlin/blob/dev/src/main/kotlin/Triangle.kt
  * A three-sided shape.
  * By        : Leomar Durán <https://github.com/lduran2>
- * When      : 2022-09-10t23:15Q
+ * When      : 2022-09-11t00:03Q
  * For       : CIS3515/Intro to Mobile Application Development
  */
 open class Triangle: Shape{
@@ -110,17 +110,6 @@ open class Triangle: Shape{
     } /* end fun appendingSidesTo(ap : Appendable, index : Int) */
 
     /**
-     * Returns the magnitude of the side given by index.
-     * Since this is a protected function, no index bound check is
-     * performed.
-     * @param index : Int = of the side
-     * @return magnitude of the side
-     */
-    protected open fun getSideUnsafe(index : Int) : Double{
-        return this.sides[index]
-    } /* end fun getSide(index : Int) : Double */
-
-    /**
      * Finds the area of this triangle.
      * @return the area of this triangle
      */
@@ -144,6 +133,17 @@ open class Triangle: Shape{
             .map{this.getSideUnsafe(it)}
             .sum()
     } /* end fun getPerimeter() */
+
+    /**
+     * Returns the magnitude of the side given by index.
+     * Since this is a protected function, no index bound check is
+     * performed.
+     * @param index : Int = of the side
+     * @return magnitude of the side
+     */
+    protected open fun getSideUnsafe(index : Int) : Double{
+        return this.sides[index]
+    } /* end fun getSide(index : Int) : Double */
 
 } /* end class Triangle */
 
