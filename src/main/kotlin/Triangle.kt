@@ -59,7 +59,7 @@ open class Triangle: Shape{
     } /* end fun getSide(index : Int) : Double */
 
     override fun dimensionsToString() : String{
-        return ""
+        return "side #1 = 0.0000e+00, side #2 = 0.0000e+00, side #3 = 0.0000e+00"
     } /* end fun dimensionsToString() */
 
     /**
