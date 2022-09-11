@@ -1,4 +1,25 @@
 CHANGELOG :
+    v5.2.3 - 2022-09-11t16:42Q
+        [tests_scan] for equilateral triangle
+
+    v5.2.2 - 2022-09-11t16:07Q
+        [tests_scan] for triangle
+
+    v5.2.1 - 2022-09-11t16:02Q
+        [tests_scan] for circle
+
+    v5.2.0 - 2022-09-11t14:34Q
+        [tests_scan] for square
+
+    v5.1.0 - 2022-09-11t13:11Q
+        [Main] empty Shape.scanDimensionsFrom
+
+    v5.0.1 - 2022-09-11t01:52Q
+        [Main] named Shape instances
+
+    v5.0.0 - 2022-09-11t01:39Q
+        [Main] created instances of Shape classes (nameless)
+
     v4.5.6 - 2022-09-10t20:43Q
         [implements] triangle, equilateral passes name, dimensions tests
 
@@ -31,9 +52,6 @@ CHANGELOG :
 
     v4.3.0 - 2022-09-10t16:07Q
         [tests] testbench for square, up to dimensions
-
-    v4.3.-8 - 2022-09-11t12:21Q
-        [tests] added .gitignore
 
     v4.3.-8 - 2022-09-11t12:21Q
         [tests] added .gitignore
