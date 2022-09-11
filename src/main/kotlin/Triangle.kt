@@ -1,10 +1,11 @@
 import java.lang.StringBuilder
+import kotlin.math.sqrt
 
 /**
  * Canonical : https://github.com/lduran2/cis3515-hw0-oop_in_kotlin/blob/dev/src/main/kotlin/Triangle.kt
  * A three-sided shape.
  * By        : Leomar Durán <https://github.com/lduran2>
- * When      : 2022-09-10t20:43Q
+ * When      : 2022-09-11t00:03Q
  * For       : CIS3515/Intro to Mobile Application Development
  */
 open class Triangle: Shape{
@@ -61,7 +62,7 @@ open class Triangle: Shape{
     } /* end fun getSide(index : Int) : Double */
 
     /**
-     * Represents the dimensions of this circle as a string.
+     * Represents the dimensions of this triangle as a string.
      * @return the string representation
      */
     override fun dimensionsToString() : String{
@@ -107,6 +108,31 @@ open class Triangle: Shape{
         /* return whether next side is valid */
         return (iNext in 0 until TriangleConsts.N_SIDES)
     } /* end fun appendingSidesTo(ap : Appendable, index : Int) */
+
+    /**
+     * Finds the area of this triangle.
+     * @return the area of this triangle
+     */
+    override fun getArea() : Double{
+        val s = (this.getPerimeter() / 2)       /* semi-perimeter */
+        /* product of (s - si) for each side */
+        val prod = (0 until TriangleConsts.N_SIDES)
+            .map{s - this.getSideUnsafe(it)}
+            .reduce(Double::times)
+        /* return square root of total product */
+        return sqrt((s * prod))
+    } /* end fun getArea() */
+
+    /**
+     * Finds the perimeter of this triangle.
+     * @return the perimeter of this triangle
+     */
+    fun getPerimeter() : Double{
+        /* find the sum of each side */
+        return (0 until TriangleConsts.N_SIDES)
+            .map{this.getSideUnsafe(it)}
+            .sum()
+    } /* end fun getPerimeter() */
 
     /**
      * Returns the magnitude of the side given by index.
