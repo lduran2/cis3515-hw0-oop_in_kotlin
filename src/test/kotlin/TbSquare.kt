@@ -1,8 +1,9 @@
 import org.junit.Test
+import kotlin.test.assertEquals
+
+import java.util.Scanner
 import java.io.OutputStream.nullOutputStream
 import java.io.PrintWriter
-import java.util.*
-import kotlin.test.assertEquals
 
 /**
  * Canonical : https://github.com/lduran2/cis3515-hw0-oop_in_kotlin/blob/dev/src/test/kotlin/TbSquare.kt

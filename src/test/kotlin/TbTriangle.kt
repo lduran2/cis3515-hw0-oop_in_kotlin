@@ -1,8 +1,9 @@
 import org.junit.Test
-import java.io.OutputStream
-import java.io.PrintWriter
-import java.util.*
 import kotlin.test.assertEquals
+
+import java.util.Scanner
+import java.io.OutputStream.nullOutputStream
+import java.io.PrintWriter
 
 /**
  * Canonical : https://github.com/lduran2/cis3515-hw0-oop_in_kotlin/blob/dev/src/test/kotlin/TbTriangle.kt
@@ -17,7 +18,7 @@ class TbTriangle{
     private val consts = TbTriangleConsts
 
     /** printer that no-ops */
-    private val nullOut = PrintWriter(OutputStream.nullOutputStream())
+    private val nullOut = PrintWriter(nullOutputStream())
 
     /**
      * Tests `scanDimensionsFrom` with a test regular triangle.

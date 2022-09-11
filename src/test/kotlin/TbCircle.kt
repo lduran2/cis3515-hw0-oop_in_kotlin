@@ -1,10 +1,11 @@
 import org.junit.Test
-import java.io.OutputStream
-import java.io.PrintWriter
 import kotlin.test.assertEquals
 import java.lang.Math.pow
-import java.util.*
 import kotlin.math.PI
+
+import java.util.Scanner
+import java.io.OutputStream.nullOutputStream
+import java.io.PrintWriter
 
 /**
  * Canonical : https://github.com/lduran2/cis3515-hw0-oop_in_kotlin/blob/dev/src/test/kotlin/TbCircle.kt
@@ -19,7 +20,7 @@ class TbCircle{
     private val consts = TbCircleConsts
 
     /** printer that no-ops */
-    private val nullOut = PrintWriter(OutputStream.nullOutputStream())
+    private val nullOut = PrintWriter(nullOutputStream())
 
     /**
      * Tests `scanDimensionsFrom` with a unit circle.

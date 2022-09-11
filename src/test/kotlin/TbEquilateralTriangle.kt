@@ -1,9 +1,10 @@
 import org.junit.Test
-import java.io.OutputStream
-import java.io.PrintWriter
 import kotlin.test.assertEquals
 import java.lang.Math.pow
-import java.util.*
+
+import java.util.Scanner
+import java.io.OutputStream.nullOutputStream
+import java.io.PrintWriter
 
 /**
  * Canonical : https://github.com/lduran2/cis3515-hw0-oop_in_kotlin/blob/dev/src/test/kotlin/TbEquilateralTriangle.kt
@@ -18,7 +19,7 @@ class TbEquilateralTriangle{
     private val consts = TbEquilateralTriangleConsts
 
     /** printer that no-ops */
-    private val nullOut = PrintWriter(OutputStream.nullOutputStream())
+    private val nullOut = PrintWriter(nullOutputStream())
 
     /**
      * Tests `scanDimensionsFrom` with a test equilateral triangle.
@@ -70,7 +71,7 @@ object TbEquilateralTriangleConsts{
     /** sides of another test equilateral triangle */
     val SIDES_LENGTH2 = ((2.0 * pow(3.0, 0.75))/3.0)
     /** input for another test equilateral triangle */
-    const val IN2 = "${SIDES_LENGTH2}"
+    val IN2 = "${SIDES_LENGTH2}"
     /** expected string representation of another test equilateral triangle */
     const val DIMENSIONS2 =
         "side #1 = 1.5197e+00, side #2 = 1.5197e+00, side #3 = 1.5197e+00"
