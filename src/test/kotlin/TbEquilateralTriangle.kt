@@ -9,7 +9,7 @@ import java.lang.Math.pow
  * When      : 2022-09-10t18:15Q
  * For       : CIS3515/Intro to Mobile Application Development
  */
-class TbEquilateralTriangle {
+class TbEquilateralTriangle{
 
     /** the object holding the testing constants */
     private val consts = TbEquilateralTriangleConsts
@@ -90,18 +90,23 @@ class TbEquilateralTriangle {
 object TbEquilateralTriangleConsts{
     /** test triangle name */
     const val NAME = "triangle ABC"
+
     /** sides of a test vacuous triangle */
     const val SIDES_LENGTH0 = 0.0
     /** expected string representation of test vacuous triangle */
     const val DIMENSIONS0 =
         "side #1 = 0.0000e+00, side #2 = 0.0000e+00, side #3 = 0.0000e+00"
-    /** sides of a test regular triangle */
+
+    /** sides of a test equilateral triangle */
     const val SIDES_LENGTH1 = 1.0
-    /** expected string representation of test triangle */
+    /** expected string representation of test equilateral triangle */
     const val DIMENSIONS1 =
         "side #1 = 1.0000e+00, side #2 = 1.0000e+00, side #3 = 1.0000e+00"
-    /** sides of the 3-4-5 triangle */
+
+    /** sides of another test equilateral triangle */
     val SIDES_LENGTH2 = ((2.0 * pow(3.0, 0.75))/3.0)
-    /** expected string representation of the 3-4-5 triangle */
-    const val DIMENSIONS2 =  "side #1 = 1.5197e+00, side #2 = 1.5197e+00, side #3 = 1.5197e+00"
+    /** expected string representation of another test equilateral triangle */
+    const val DIMENSIONS2 =
+        "side #1 = 1.5197e+00, side #2 = 1.5197e+00, side #3 = 1.5197e+00"
+
 } /* end object TbEquilateralTriangleConsts */
