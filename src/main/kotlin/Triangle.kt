@@ -1,11 +1,10 @@
-import java.lang.StringBuilder
 import kotlin.math.sqrt
 
 /**
  * Canonical : https://github.com/lduran2/cis3515-hw0-oop_in_kotlin/blob/dev/src/main/kotlin/Triangle.kt
  * A three-sided shape.
  * By        : Leomar Durán <https://github.com/lduran2>
- * When      : 2022-09-11t00:03Q
+ * When      : 2022-09-11t19:49Q
  * For       : CIS3515/Intro to Mobile Application Development
  */
 open class Triangle: Shape{
@@ -65,49 +64,15 @@ open class Triangle: Shape{
      * Represents the dimensions of this triangle as a string.
      * @return the string representation
      */
-    override fun dimensionsToString() : String{
-        /* accumulate the dimensions into a new stringbuilder */
-        val SB = appendDimensionsTo(StringBuilder())
-        /* return the resulting string */
-        return SB.toString()
+    override fun dimensionsToString() : String {
+        /* for each side */
+        return (0 until TriangleConsts.N_SIDES)
+            /* format as an equation, */
+            .map{"side #${it + 1} = ${"%.4e".format(this.getSideUnsafe(it))}"}
+            /* join with ", " */
+            .joinToString(", ")
+        ;
     } /* end fun dimensionsToString() */
-
-    /**
-     * Appends a string representation of the dimensions of this
-     * triangle to the given appendable character buffer.
-     * @param ap : Appendable = to which to append the string
-     *      representation
-     * @return the appendable character buffer passed in
-     */
-    fun appendDimensionsTo(ap : Appendable) : Appendable{
-        /* append each side */
-        var i = 0       /* index of current side */
-        while (appendingSidesTo(ap, i)){
-            /* append ", " in-between */
-            ap.append(", ")
-            /* next i */
-            ++i
-        } /* end while (appendingSides(a, i)) */
-        return ap
-    } /* end fun appendDimensionsTo(ap : Appendable) */
-
-    /**
-     * Appends a string representation of the side given by index,
-     * returning whether the next index would be valid.
-     * @param ap : Appendable = to which to append the string
-     *      representation
-     * @param index : Int = of the side
-     * @return true if the next index would be valid; false otherwise
-     */
-    private fun appendingSidesTo(ap : Appendable, index : Int) : Boolean{
-        /* calculate the next side index */
-        val iNext = (index + 1)
-        /* append the current side, using next index as side # */
-        ap.append("side #${iNext} = " +
-                "${"%.4e".format(this.getSideUnsafe(index))}")
-        /* return whether next side is valid */
-        return (iNext in 0 until TriangleConsts.N_SIDES)
-    } /* end fun appendingSidesTo(ap : Appendable, index : Int) */
 
     /**
      * Finds the area of this triangle.

@@ -1,4 +1,7 @@
 CHANGELOG :
+    v4.8.0 - 2022-09-11t19:49Q
+        [implements] triangle.dimsToStr using joinToString
+
     v4.7.3 - 2022-09-11t00:03Q
         [implements] triangle passes getArea
 
