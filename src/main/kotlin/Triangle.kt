@@ -60,8 +60,8 @@ open class Triangle: Shape{
 
     override fun dimensionsToString() : String{
         return ("side #1 = ${this.getSideUnsafe(0)}000e+00, " +
-                "side #2 = ${this.getSideUnsafe(0)}000e+00, " +
-                "side #3 = ${this.getSideUnsafe(0)}000e+00")
+                "side #2 = ${this.getSideUnsafe(1)}000e+00, " +
+                "side #3 = ${this.getSideUnsafe(2)}000e+00")
     } /* end fun dimensionsToString() */
 
     /**
