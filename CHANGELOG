@@ -1,4 +1,7 @@
 CHANGELOG :
+    v5.1.0 - 2022-09-11t13:11Q
+        [Main] empty Shape.scanDimensionsFrom
+
     v5.0.1 - 2022-09-11t01:52Q
         [Main] named Shape instances
 
