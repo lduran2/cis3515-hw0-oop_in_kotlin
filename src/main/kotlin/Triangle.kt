@@ -1,25 +1,30 @@
+import java.lang.StringBuilder
+import kotlin.math.sqrt
+
 /**
  * Canonical : https://github.com/lduran2/cis3515-hw0-oop_in_kotlin/blob/dev/src/main/kotlin/Triangle.kt
  * A three-sided shape.
  * By        : Leomar Durán <https://github.com/lduran2>
- * When      : 2022-09-10t23:15Q
+ * When      : 2022-09-11t00:03Q
  * For       : CIS3515/Intro to Mobile Application Development
  */
 open class Triangle: Shape{
 
     /**
      * The three sides of the triangle.
-     * They must be modified through `setDimensions`.
+     * @see #constructor(String, DoubleArray)
      * @see #setDimensions
+     * @see #printDimensions
      */
-    protected val sides : DoubleArray
+    private val sides : DoubleArray
 
     /**
      * Allocates space for a new triangle and initializes it with the
      * given name and all 3 sides of length 0.0.
      * @param _name : String = name of this new triangle
      */
-    constructor(_name : String): this(_name, DoubleArray(N_SIDES)){}
+    constructor(_name : String):
+            this(_name, DoubleArray(TriangleConsts.N_SIDES)){}
 
     /**
      * Allocates space for a new triangle and initializes it with the
@@ -33,53 +38,121 @@ open class Triangle: Shape{
     } /* end constructor(_name : String, _sides : DoubleArray) */
 
     /**
-     * Returns the magnitude of the side given by index.
-     * @param index : Int = of the side
-     * @return magnitude of the side
-     */
-    open fun getSide(index : Int) : Double{
-        checkSideIndex(index)
-        /* return magnitude of the corresponding side if within bounds */
-        return this.sides[index]
-    } /* end fun getSide(index : Int) : Double */
-
-    /**
-     * Checks if the side index is within of bounds (0 until N_SIDES).
-     * @param index : Int = of the side
-     * @throws IndexOutOfBoundsException if the side index is out of bounds
-     */
-    protected fun checkSideIndex(index : Int){
-        /* check that the index is not out of range */
-        if (index !in 0 until N_SIDES) {
-            /* if so, stop the program */
-            throw IndexOutOfBoundsException(
-                "Index: ${index}, #sides: ${N_SIDES}")
-        } /* end if (index !in 0 until N_SIDES) */
-    } /* end fun checkSideIndex(index : Int) */
-
-    /**
      * Updates the sides of this triangle.
      * @param _s1 : Double = new magnitude of side #1
      * @param _s2 : Double = new magnitude of side #2
      * @param _s3 : Double = new magnitude of side #3
      */
     fun setDimensions(_s1 : Double, _s2 : Double, _s3 : Double){
-        this.sides[0] = _s1
-        this.sides[1] = _s2
-        this.sides[2] = _s3
+        /* set each side called open setSideUnsafe */
+        this.setSideUnsafe(0, _s1)
+        this.setSideUnsafe(1, _s2)
+        this.setSideUnsafe(2, _s3)
     } /* end fun setDimensions(_s1 : Double, _s2 : Double, _s3 : Double) */
 
     /**
-     * Calculates the perimeter of this triangle.
+     * Updates the magnitude of the side given by index.
+     * Since this is a protected function, no index bound check is
+     * performed.
+     * @param index : Int = of the side
+     * @param _side : Double = new magnitude of the side
+     */
+    protected open fun setSideUnsafe(index : Int, _side : Double){
+        this.sides[index] = _side
+    } /* end fun getSide(index : Int) : Double */
+
+    /**
+     * Represents the dimensions of this triangle as a string.
+     * @return the string representation
+     */
+    override fun dimensionsToString() : String{
+        /* accumulate the dimensions into a new stringbuilder */
+        val SB = appendDimensionsTo(StringBuilder())
+        /* return the resulting string */
+        return SB.toString()
+    } /* end fun dimensionsToString() */
+
+    /**
+     * Appends a string representation of the dimensions of this
+     * triangle to the given appendable character buffer.
+     * @param ap : Appendable = to which to append the string
+     *      representation
+     * @return the appendable character buffer passed in
+     */
+    fun appendDimensionsTo(ap : Appendable) : Appendable{
+        /* append each side */
+        var i = 0       /* index of current side */
+        while (appendingSidesTo(ap, i)){
+            /* append ", " in-between */
+            ap.append(", ")
+            /* next i */
+            ++i
+        } /* end while (appendingSides(a, i)) */
+        return ap
+    } /* end fun appendDimensionsTo(ap : Appendable) */
+
+    /**
+     * Appends a string representation of the side given by index,
+     * returning whether the next index would be valid.
+     * @param ap : Appendable = to which to append the string
+     *      representation
+     * @param index : Int = of the side
+     * @return true if the next index would be valid; false otherwise
+     */
+    private fun appendingSidesTo(ap : Appendable, index : Int) : Boolean{
+        /* calculate the next side index */
+        val iNext = (index + 1)
+        /* append the current side, using next index as side # */
+        ap.append("side #${iNext} = " +
+                "${"%.4e".format(this.getSideUnsafe(index))}")
+        /* return whether next side is valid */
+        return (iNext in 0 until TriangleConsts.N_SIDES)
+    } /* end fun appendingSidesTo(ap : Appendable, index : Int) */
+
+    /**
+     * Finds the area of this triangle.
+     * @return the area of this triangle
+     */
+    override fun getArea() : Double{
+        val s = (this.getPerimeter() / 2)       /* semi-perimeter */
+        /* product of (s - si) for each side */
+        val prod = (0 until TriangleConsts.N_SIDES)
+            .map{s - this.getSideUnsafe(it)}
+            .reduce(Double::times)
+        /* return square root of total product */
+        return sqrt((s * prod))
+    } /* end fun getArea() */
+
+    /**
+     * Finds the perimeter of this triangle.
      * @return the perimeter of this triangle
      */
     fun getPerimeter() : Double{
-        return 0.0
-    } /* end fun getPerimeter() : Double */
+        /* find the sum of each side */
+        return (0 until TriangleConsts.N_SIDES)
+            .map{this.getSideUnsafe(it)}
+            .sum()
+    } /* end fun getPerimeter() */
+
+    /**
+     * Returns the magnitude of the side given by index.
+     * Since this is a protected function, no index bound check is
+     * performed.
+     * @param index : Int = of the side
+     * @return magnitude of the side
+     */
+    protected open fun getSideUnsafe(index : Int) : Double{
+        return this.sides[index]
+    } /* end fun getSide(index : Int) : Double */
 
 } /* end class Triangle */
 
 /**
- * The number of sides in a triangle.
+ * Holds the constants for implementing triangles.
  */
-private const val N_SIDES = 3
+object TriangleConsts {
+    /**
+     * The number of sides in a triangle.
+     */
+    const val N_SIDES = 3
+} /* end object TriangleConsts */
