@@ -35,7 +35,7 @@ class Circle (_name : String): Shape(_name){
     } /* end fun dimensionsToString() */
 
     /**
-     * Prints prompts for radius, scanning them from input.
+     * Prints prompt for radius, scanning it from input.
      * @param sc : Scanner = from which to scan new dimensions
      * @param out : PrintWriter = to which to print prompts for input
      */

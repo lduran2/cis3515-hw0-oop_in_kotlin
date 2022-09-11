@@ -1,10 +1,11 @@
-import java.lang.StringBuilder
+import java.util.Scanner
+import java.io.PrintWriter
 
 /**
  * Canonical : https://github.com/lduran2/cis3515-hw0-oop_in_kotlin/blob/dev/src/main/kotlin/Triangle.kt
  * A three-sided shape.
  * By        : Leomar Durán <https://github.com/lduran2>
- * When      : 2022-09-10t20:43Q
+ * When      : 2022-09-11t18:20Q
  * For       : CIS3515/Intro to Mobile Application Development
  */
 open class Triangle: Shape{
@@ -118,6 +119,27 @@ open class Triangle: Shape{
     protected open fun getSideUnsafe(index : Int) : Double{
         return this.sides[index]
     } /* end fun getSide(index : Int) : Double */
+
+    /**
+     * Prints a prompt for each side, scanning them from input.
+     * @param sc : Scanner = from which to scan new dimensions
+     * @param out : PrintWriter = to which to print prompts for input
+     */
+    override fun scanDimensionsFrom(sc : Scanner, out : PrintWriter){
+        /* all sides of the triangle, 1-indexed */
+        val sides = DoubleArray(TriangleConsts.N_SIDES + 1)
+        /* header */
+        out.print("For ${name}:\n")
+
+        /* get each side */
+        for (i in 1..TriangleConsts.N_SIDES){
+            out.print("\tEnter length: ")
+            sides[i] = sc.nextDouble()
+        } /* for (1..TriangleConsts.N_SIDES) */
+
+        /* update the dimensions */
+        this.setDimensions(sides[1], sides[2], sides[3])
+    } /* end fun scanDimensionsFrom(sc : Scanner, out : PrintWriter) */
 
 } /* end class Triangle */
 
