@@ -53,11 +53,15 @@ class Square (_name : String): Shape(_name){
         val height : Double     /* of square */
         /* header */
         out.print("For ${name}:\n")
-        /* get the length */
+        /* prompt for length */
         out.print("\tEnter length: ")
+        out.flush()
+        /* get the length */
         length = sc.nextDouble()
-        /* get the height */
+        /* prompt for height */
         out.print("\tEnter height: ")
+        out.flush()
+        /* get the height */
         height = sc.nextDouble()
         /* update the dimensions */
         this.setDimensions(length, height)

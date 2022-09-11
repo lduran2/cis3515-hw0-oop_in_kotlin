@@ -37,8 +37,10 @@ class EquilateralTriangle (_name : String): Triangle(_name, DoubleArray(1)){
         val length : Double     /* of all sides of triangle */
         /* header */
         out.print("For ${name},")
+        /* prompt for length */
+        out.print(" enter length of all sides: ")
+        out.flush()
         /* get the length */
-        out.print(", enter length of all sides: ")
         length = sc.nextDouble()
         /* update the dimensions */
         this.setDimensions(length)

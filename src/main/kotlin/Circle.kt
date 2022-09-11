@@ -43,8 +43,10 @@ class Circle (_name : String): Shape(_name){
         val radius : Double     /* of circle */
         /* header */
         out.print("For ${name},")
-        /* get the length */
+        /* prompt for radius */
         out.print(" enter radius: ")
+        out.flush()
+        /* get the radius */
         radius = sc.nextDouble()
         /* update the dimensions */
         this.setDimensions(radius)

@@ -134,8 +134,9 @@ open class Triangle: Shape{
         /* get each side */
         for (i in 1..TriangleConsts.N_SIDES){
             out.print("\tEnter side #${i}: ")
+            out.flush()
             sides[i] = sc.nextDouble()
-        } /* for (1..TriangleConsts.N_SIDES) */
+        } /* end for (i in 1..TriangleConsts.N_SIDES) */
 
         /* update the dimensions */
         this.setDimensions(sides[1], sides[2], sides[3])
