@@ -21,14 +21,17 @@ class TbTriangle{
 object TbTriangleConsts{
     /** test triangle name */
     const val NAME = "triangle ABC"
+
     /** sides of a test regular triangle */
     val SIDES1 = doubleArrayOf(1.0, 1.0, 1.0)
     /** expected string representation of test regular triangle */
     const val DIMENSIONS1 =
         "side #1 = 1.0000e+00, side #2 = 1.0000e+00, side #3 = 1.0000e+00"
+
     /** sides of the 3-4-5 triangle */
     val SIDES345 = doubleArrayOf(3.0, 4.0, 5.0)
     /** expected string representation of the 3-4-5 triangle */
     const val DIMENSIONS345 =
         "side #1 = 3.0000e+00, side #2 = 4.0000e+00, side #3 = 5.0000e+00"
+
 } /* end object TbTriangleConsts */

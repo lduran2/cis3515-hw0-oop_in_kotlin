@@ -23,12 +23,15 @@ class TbCircle{
 object TbCircleConsts{
     /** test circle name */
     const val NAME = "circle P"
+
     /** radius of test unit circle */
     const val RADIUS1 = 1.0
     /** expected string representation of test unit circle */
     const val DIMENSIONS1 = "radius = 1.0000e+00"
+
     /** radius of another test circle */
     val RADIUS2 = pow(PI, (-1.0/2.0))
     /** expected string representation of another test circle */
     const val DIMENSIONS2 = "radius = 5.6419e-01"
+
 } /* end object TbCircleConsts */
