@@ -48,17 +48,6 @@ open class Triangle: Shape{
     } /* end fun setDimensions(_s1 : Double, _s2 : Double, _s3 : Double) */
 
     /**
-     * Returns the magnitude of the side given by index.
-     * Since this is a protected function, no index bound check is
-     * performed.
-     * @param index : Int = of the side
-     * @return magnitude of the side
-     */
-    protected open fun getSideUnsafe(index : Int) : Double{
-        return this.sides[index]
-    } /* end fun getSide(index : Int) : Double */
-
-    /**
      * Updates the magnitude of the side given by index.
      * Since this is a protected function, no index bound check is
      * performed.
@@ -67,6 +56,21 @@ open class Triangle: Shape{
      */
     protected open fun setSideUnsafe(index : Int, _side : Double){
         this.sides[index] = _side
+    } /* end fun getSide(index : Int) : Double */
+
+    override fun dimensionsToString() : String{
+        return ""
+    } /* end fun dimensionsToString() */
+
+    /**
+     * Returns the magnitude of the side given by index.
+     * Since this is a protected function, no index bound check is
+     * performed.
+     * @param index : Int = of the side
+     * @return magnitude of the side
+     */
+    protected open fun getSideUnsafe(index : Int) : Double{
+        return this.sides[index]
     } /* end fun getSide(index : Int) : Double */
 
 } /* end class Triangle */
