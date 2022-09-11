@@ -1,4 +1,7 @@
 CHANGELOG :
+    v5.0.0 - 2022-09-11t01:39Q
+        [Main] created instances of Shape classes (nameless)
+
     v4.2.0 - 2022-09-09t23:53Q
         [implements] setDimensions: EquilateralTriangle
 
