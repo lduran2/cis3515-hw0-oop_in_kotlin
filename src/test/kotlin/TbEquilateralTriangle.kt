@@ -103,5 +103,6 @@ object TbEquilateralTriangleConsts{
     /** sides of the 3-4-5 triangle */
     val SIDES_LENGTH2 = ((2.0 * pow(3.0, 0.75))/3.0)
     /** expected string representation of the 3-4-5 triangle */
-    const val DIMENSIONS2 =  "side #1 = 1.5197e+00, side #2 = 1.5197e+00, side #3 = 1.5197e+00"
+    const val DIMENSIONS2 =
+        "side #1 = 1.5197e+00, side #2 = 1.5197e+00, side #3 = 1.5197e+00"
 } /* end object TbEquilateralTriangleConsts */

@@ -1,4 +1,13 @@
 CHANGELOG :
+    v4.6.2 - 2022-09-10t21:35Q
+        [tests] tb getArea for all shapes
+
+    v4.6.1 - 2022-09-10t21:16Q
+        [tests] tb for Circle.getArea
+
+    v4.6.0 - 2022-09-10t21:07Q
+        [tests] tb for Square.getArea
+
     v4.5.6 - 2022-09-10t20:43Q
         [implements] triangle, equilateral passes name, dimensions tests
 
