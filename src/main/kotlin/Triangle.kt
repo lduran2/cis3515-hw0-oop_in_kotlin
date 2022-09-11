@@ -126,14 +126,12 @@ open class Triangle: Shape{
      */
     override fun getArea() : Double{
         val s = (this.getPerimeter() / 2)       /* semi-perimeter */
-        return sqrt(
-            /* for each side */
-            (0 until TriangleConsts.N_SIDES)
-                /* map (s - si) */
-                .map{s - this.getSideUnsafe(it)}
-                /* multiply altogether, initially semi-perimeter */
-                .reduce{s, el -> (s * el)}
-        ) /* end sqrt */
+        /* product of (s - si) for each side */
+        val prod = (0 until TriangleConsts.N_SIDES)
+            .map{s - this.getSideUnsafe(it)}
+            .reduce(Double::times)
+        /* return square root of total product */
+        return sqrt((s * prod))
     } /* end fun getArea() */
 
     /**
