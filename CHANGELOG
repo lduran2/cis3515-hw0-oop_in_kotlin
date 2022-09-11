@@ -1,4 +1,7 @@
 CHANGELOG :
+    v4.6.3 - 2022-09-10t21:35Q
+        [tests] tb for Triangle.getPerimeter
+
     v4.6.2 - 2022-09-10t21:35Q
         [tests] tb getArea for all shapes
 
