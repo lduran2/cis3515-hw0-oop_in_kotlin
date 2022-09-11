@@ -143,8 +143,8 @@ object TbCircleConsts{
     const val DIMENSIONS0 = "radius = 0.0000e+00"
     /** expected area of test vacuous circle */
     const val AREA0 = 0.0
-    /** radius of test unit circle */
 
+    /** radius of test unit circle */
     const val RADIUS1 = 1.0
     /** expected string representation of test unit circle */
     const val DIMENSIONS1 = "radius = 1.0000e+00"
