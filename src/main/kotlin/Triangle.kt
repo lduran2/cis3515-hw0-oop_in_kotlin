@@ -2,7 +2,7 @@
  * Canonical : https://github.com/lduran2/cis3515-hw0-oop_in_kotlin/blob/dev/src/main/kotlin/Triangle.kt
  * A three-sided shape.
  * By        : Leomar Durán <https://github.com/lduran2>
- * When      : 2022-09-09t23:17Q
+ * When      : 2022-09-10t23:15Q
  * For       : CIS3515/Intro to Mobile Application Development
  */
 open class Triangle: Shape{
@@ -68,6 +68,14 @@ open class Triangle: Shape{
         this.sides[1] = _s2
         this.sides[2] = _s3
     } /* end fun setDimensions(_s1 : Double, _s2 : Double, _s3 : Double) */
+
+    /**
+     * Calculates the perimeter of this triangle.
+     * @return the perimeter of this triangle
+     */
+    fun getPerimeter() : Double{
+        return 0.0
+    } /* end fun getPerimeter() : Double */
 
 } /* end class Triangle */
 
