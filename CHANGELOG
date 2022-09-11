@@ -5,6 +5,16 @@ CHANGELOG :
     v5.0.0 - 2022-09-11t01:39Q
         [Main] created instances of Shape classes (nameless)
 
+    v4.3.-8 - 2022-09-11t12:21Q
+        [tests] added .gitignore
+
+    v4.3.-9 - 2022-09-11t12:19Q
+        [tests] roots to $PROJECT_DIR$ instead of $MAVEN_REPOSITORY$
+        simple tests on TbSquare
+
+    v4.3.-10 - 2022-09-11t12:02Q
+        [tests] empty common classes for test benches
+
     v4.2.0 - 2022-09-09t23:53Q
         [implements] setDimensions: EquilateralTriangle
 
