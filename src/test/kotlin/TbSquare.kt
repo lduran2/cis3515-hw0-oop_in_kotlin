@@ -14,21 +14,72 @@ class TbSquare{
     private val consts = TbSquareConsts
 
     /**
-     * Always fails.
+     * Tests the constructor and name accessor.
      */
     @Test
-    fun fail(){
-        assertEquals(false, true)
-    } /* end fun fail() */
+    fun testGetName(){
+        /* create a square */
+        val shape : Shape = Square(consts.NAME)
+        /* check the name */
+        assertEquals(consts.NAME, shape.name)
+    } /* end fun testGetName() */
 
     /**
-     * Greets and passes.
+     * Tests the name mutator.
      */
     @Test
-    fun pass(){
-        print("Hello world!")
-        assertEquals(true, true)
-    } /* end fun fail() */
+    fun testSetName(){
+        /* create a square */
+        val square = Square("")
+        /* change the name */
+        square.name = consts.NAME
+        /* check the name */
+        assertEquals(consts.NAME, square.name)
+    } /* end fun testSetName() */
+
+    /**
+     * Tests the dimension mutator and `dimensionsToString` of a
+     * vacuous square.
+     */
+    @Test
+    fun testDimensions0(){
+        /* create a square */
+        val square = Square(consts.NAME)
+        /* set the dimensions */
+        square.setDimensions(consts.LENGTH0, consts.HEIGHT0)
+        /* check the dimensions */
+        assertEquals(consts.DIMENSIONS0, square.dimensionsToString())
+    } /* end fun testDimensions0() */
+
+    /**
+     * Tests the dimension mutator and `dimensionsToString` of a
+     * regular square.
+     */
+    @Test
+    fun testDimensions1(){
+        /* create a square */
+        val square = Square(consts.NAME)
+        /* set the dimensions */
+        square.setDimensions(consts.LENGTH1, consts.HEIGHT1)
+        /* check the dimensions */
+        assertEquals(consts.DIMENSIONS1, square.dimensionsToString())
+    } /* end fun testDimensions1() */
+
+    /**
+     * Tests the dimension mutator and `dimensionsToString` of an
+     * irregular square.
+     */
+    @Test
+    fun testDimensions2(){
+        /* create a square */
+        val square = Square(consts.NAME)
+        /* set the initial dimensions */
+        square.setDimensions(consts.LENGTH1, consts.HEIGHT1)
+        /* update the dimensions */
+        square.setDimensions(consts.LENGTH2, consts.HEIGHT2)
+        /* check the dimensions */
+        assertEquals(consts.DIMENSIONS2, square.dimensionsToString())
+    } /* end fun testDimensions2() */
 
 } /* end class TbSquare */
 
@@ -38,6 +89,13 @@ class TbSquare{
 object TbSquareConsts{
     /** test square name */
     const val NAME = "square ABCD"
+
+    /** length and height of test vacuous square */
+    const val LENGTH0 = 0.0
+    const val HEIGHT0 = 0.0
+    /** expected string representation of test vacuous square's
+     * dimensions */
+    const val DIMENSIONS0 = "length = 0.0000e+00, height = 0.0000e+00"
 
     /** length and height of test regular square */
     const val LENGTH1 = 10.0

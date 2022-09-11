@@ -15,6 +15,74 @@ class TbCircle{
     /** the object holding the testing constants */
     private val consts = TbCircleConsts
 
+    /**
+     * Tests the constructor and name accessor.
+     */
+    @Test
+    fun testGetName(){
+        /* create a circle */
+        val shape : Shape = Circle(consts.NAME)
+        /* check the name */
+        assertEquals(consts.NAME, shape.name)
+    } /* end fun testGetName() */
+
+    /**
+     * Tests the name mutator.
+     */
+    @Test
+    fun testSetName(){
+        /* create a circle */
+        val circle = Circle("")
+        /* change the name */
+        circle.name = consts.NAME
+        /* check the name */
+        assertEquals(consts.NAME, circle.name)
+    } /* end fun testSetName() */
+
+    /**
+     * Tests the dimension mutator and `dimensionsToString` of a
+     * vacuous circle.
+     */
+    @Test
+    fun testDimensions0(){
+        /* create a circle */
+        val circle = Circle(consts.NAME)
+        /* set the dimensions */
+        circle.setDimensions(consts.RADIUS0)
+        /* check the dimensions */
+        assertEquals(consts.DIMENSIONS0, circle.dimensionsToString())
+    } /* end fun testDimensions0() */
+
+    /**
+     * Tests the dimension mutator and `dimensionsToString` of a
+     * circle.
+     */
+    @Test
+    fun testDimensions1(){
+        /* create a circle */
+        val circle = Circle(consts.NAME)
+        /* set the dimensions */
+        circle.setDimensions(consts.RADIUS1)
+        /* check the dimensions */
+        assertEquals(consts.DIMENSIONS1, circle.dimensionsToString())
+    } /* end fun testDimensions1() */
+
+    /**
+     * Tests the dimension mutator and `dimensionsToString` of another
+     * circle.
+     */
+    @Test
+    fun testDimensions2(){
+        /* create a circle */
+        val circle = Circle(consts.NAME)
+        /* set the initial dimensions */
+        circle.setDimensions(consts.RADIUS1)
+        /* update the dimensions */
+        circle.setDimensions(consts.RADIUS2)
+        /* check the dimensions */
+        assertEquals(consts.DIMENSIONS2, circle.dimensionsToString())
+    } /* end fun testDimensions2() */
+
 } /* end class TbCircle */
 
 /**
@@ -23,6 +91,11 @@ class TbCircle{
 object TbCircleConsts{
     /** test circle name */
     const val NAME = "circle P"
+
+    /** radius of test vacuous circle */
+    const val RADIUS0 = 0.0
+    /** expected string representation of test vacuous circle */
+    const val DIMENSIONS0 = "radius = 0.0000e+00"
 
     /** radius of test unit circle */
     const val RADIUS1 = 1.0
