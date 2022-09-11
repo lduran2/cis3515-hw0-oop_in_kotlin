@@ -20,7 +20,7 @@ class TbCircle{
     private val consts = TbCircleConsts
 
     /** printer that no-ops */
-    private val nullOut = PrintWriter(OutputStream.nullOutputStream())
+    private val nullOut = PrintWriter(nullOutputStream())
 
     /**
      * Tests the constructor and name accessor.

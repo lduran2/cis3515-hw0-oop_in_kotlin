@@ -19,7 +19,7 @@ class TbEquilateralTriangle{
     private val consts = TbEquilateralTriangleConsts
 
     /** printer that no-ops */
-    private val nullOut = PrintWriter(OutputStream.nullOutputStream())
+    private val nullOut = PrintWriter(nullOutputStream())
 
     /**
      * Tests the constructor and name accessor.
@@ -145,7 +145,7 @@ object TbEquilateralTriangleConsts{
     /** sides of another test equilateral triangle */
     val SIDES_LENGTH2 = ((2.0 * pow(3.0, 0.75))/3.0)
     /** input for another test equilateral triangle */
-    const val IN2 = "${SIDES_LENGTH2}"
+    val IN2 = "${SIDES_LENGTH2}"
     /** expected string representation of another test equilateral triangle */
     const val DIMENSIONS2 =
         "side #1 = 1.5197e+00, side #2 = 1.5197e+00, side #3 = 1.5197e+00"
