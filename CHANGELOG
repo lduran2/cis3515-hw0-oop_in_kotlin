@@ -1,4 +1,7 @@
 CHANGELOG :
+    v4.6.1 - 2022-09-10t21:16Q
+        [tests] tb for Circle.getArea
+
     v4.6.0 - 2022-09-10t21:07Q
         [tests] tb for Square.getArea
 

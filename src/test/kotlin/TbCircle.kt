@@ -95,12 +95,20 @@ object TbCircleConsts{
     const val RADIUS0 = 0.0
     /** expected string representation of test vacuous circle */
     const val DIMENSIONS0 = "radius = 0.0000e+00"
+    /** expected area of test vacuous circle */
+    const val AREA0 = 0.0
     /** radius of test circle */
     const val RADIUS1 = 1.0
     /** expected string representation of test circle */
     const val DIMENSIONS1 = "radius = 1.0000e+00"
+    /** expected area of test circle */
+    const val AREA1 = 3.1416
     /** radius of another test circle */
     val RADIUS2 = pow(PI, (-1.0/2.0))
     /** expected string representation of another test circle */
     const val DIMENSIONS2 = "radius = 5.6419e-01"
+    /** expected area of another test circle */
+    const val AREA2 = 1.0000
+    /** the maximum allowable difference between calculated areas */
+    const val ABSOLUTE_TOLERANCE = 0.00005
 } /* end object TbCircleConsts */

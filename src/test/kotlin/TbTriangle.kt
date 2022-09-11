@@ -116,4 +116,6 @@ object TbTriangleConsts{
     /** expected string representation of the 3-4-5 triangle */
     const val DIMENSIONS345 =
         "side #1 = 3.0000e+00, side #2 = 4.0000e+00, side #3 = 5.0000e+00"
+    /** the maximum allowable difference between calculated areas */
+    const val ABSOLUTE_TOLERANCE = 0.00005
 } /* end object TbTriangleConsts */

@@ -159,5 +159,5 @@ object TbSquareConsts{
     /** expected area of irregular square */
     const val AREA2 = 96.0
     /** the maximum allowable difference between calculated areas */
-    const val ABSOLUTE_TOLERANCE = 0.005
+    const val ABSOLUTE_TOLERANCE = 0.00005
 } /* end object TbSquareConsts */
