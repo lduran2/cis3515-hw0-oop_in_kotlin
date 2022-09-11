@@ -8,6 +8,15 @@ CHANGELOG :
     v4.6.0 - 2022-09-10t21:07Q
         [tests] tb for Square.getArea
 
+    v4.5.6 - 2022-09-10t20:43Q
+        [implements] triangle, equilateral passes name, dimensions tests
+
+    v4.5.5 - 2022-09-09t19:43Q
+        [implements] circle passes name, dimensions tests
+
+    v4.5.4 - 2022-09-10t19:06Q
+        [implements] square passes name, dimensions tests
+
     v4.5.3 - 2022-09-10t18:29Q
         [tests] empty implementation Shape.dimensionsToString()
 
