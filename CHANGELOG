@@ -1,3 +1,6 @@
 CHANGELOG :
+    v4.3.-1 - 2022-09-11t12:02Q
+        [tests] empty common classes for test benches
+
     v1.0-SNAPSHOT - 2022-09-06t00:51Q
         started project
