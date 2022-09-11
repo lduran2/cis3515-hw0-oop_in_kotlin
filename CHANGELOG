@@ -1,4 +1,7 @@
 CHANGELOG :
+    v5.0.1 - 2022-09-11t01:52Q
+        [Main] named Shape instances
+
     v5.0.0 - 2022-09-11t01:39Q
         [Main] created instances of Shape classes (nameless)
 
