@@ -1,6 +1,9 @@
 import org.junit.Test
+import java.io.OutputStream
+import java.io.PrintWriter
 import kotlin.test.assertEquals
 import java.lang.Math.pow
+import java.util.*
 import kotlin.math.PI
 
 /**
@@ -15,6 +18,39 @@ class TbCircle{
     /** the object holding the testing constants */
     private val consts = TbCircleConsts
 
+    /** printer that no-ops */
+    private val nullOut = PrintWriter(OutputStream.nullOutputStream())
+
+    /**
+     * Tests `scanDimensionsFrom` with a unit circle.
+     */
+    @Test
+    fun testScanDimensions1(){
+        /* create the circle */
+        val shape : Shape = Circle(consts.NAME)
+        /* create scanner on input string */
+        val sc = Scanner(consts.IN1)
+        /* read in the dimensions */
+        shape.scanDimensionsFrom(sc, nullOut)
+        /* compare to expected */
+        assertEquals(consts.DIMENSIONS1, shape.dimensionsToString())
+    } /* end fun testScanDimensions1() */
+
+    /**
+     * Tests `scanDimensionsFrom` with a test circle.
+     */
+    @Test
+    fun testScanDimensions2(){
+        /* create the circle */
+        val shape : Shape = Circle(consts.NAME)
+        /* create scanner on input string */
+        val sc = Scanner(consts.IN2)
+        /* read in the dimensions */
+        shape.scanDimensionsFrom(sc, nullOut)
+        /* compare to expected */
+        assertEquals(consts.DIMENSIONS2, shape.dimensionsToString())
+    } /* end fun testScanDimensions1() */
+
 } /* end class TbCircle */
 
 /**
@@ -23,12 +59,19 @@ class TbCircle{
 object TbCircleConsts{
     /** test circle name */
     const val NAME = "circle P"
+
     /** radius of test unit circle */
     const val RADIUS1 = 1.0
+    /** input for test unit circle */
+    const val IN1 = "${RADIUS1}"
     /** expected string representation of test unit circle */
     const val DIMENSIONS1 = "radius = 1.0000e+00"
+
     /** radius of another test circle */
     val RADIUS2 = pow(PI, (-1.0/2.0))
+    /** input for another test circle */
+    val IN2 = "${RADIUS2}"
     /** expected string representation of another test circle */
     const val DIMENSIONS2 = "radius = 5.6419e-01"
+
 } /* end object TbCircleConsts */

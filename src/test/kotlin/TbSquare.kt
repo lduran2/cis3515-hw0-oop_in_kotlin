@@ -20,7 +20,7 @@ class TbSquare{
     private val nullOut = PrintWriter(nullOutputStream())
 
     /**
-     * Tests scanDimensionsFrom with a regular square.
+     * Tests `scanDimensionsFrom` with a regular square.
      */
     @Test
     fun testScanDimensions1(){
@@ -32,10 +32,10 @@ class TbSquare{
         shape.scanDimensionsFrom(sc, nullOut)
         /* compare to expected */
         assertEquals(consts.DIMENSIONS1, shape.dimensionsToString())
-    }
+    } /* end fun testScanDimensions1() */
 
     /**
-     * Tests scanDimensionsFrom with a irregular square.
+     * Tests `scanDimensionsFrom` with a irregular square.
      */
     @Test
     fun testScanDimensions2(){
@@ -47,7 +47,7 @@ class TbSquare{
         shape.scanDimensionsFrom(sc, nullOut)
         /* compare to expected */
         assertEquals(consts.DIMENSIONS2, shape.dimensionsToString())
-    }
+    } /* end fun testScanDimensions2() */
 
 } /* end class TbSquare */
 
