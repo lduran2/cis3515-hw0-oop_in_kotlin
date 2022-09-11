@@ -1,4 +1,7 @@
 import org.junit.Test
+import java.io.OutputStream.nullOutputStream
+import java.io.PrintWriter
+import java.util.*
 import kotlin.test.assertEquals
 
 /**
@@ -13,22 +16,38 @@ class TbSquare{
     /** the object holding the testing constants */
     private val consts = TbSquareConsts
 
-    /**
-     * Always fails.
-     */
-    @Test
-    fun fail(){
-        assertEquals(false, true)
-    } /* end fun fail() */
+    /** printer that no-ops */
+    private val nullOut = PrintWriter(nullOutputStream())
 
     /**
-     * Greets and passes.
+     * Tests scanDimensionsFrom with a regular square.
      */
     @Test
-    fun pass(){
-        print("Hello world!")
-        assertEquals(true, true)
-    } /* end fun fail() */
+    fun testScanDimensions1(){
+        /* create the square */
+        val shape : Shape = Square(consts.NAME)
+        /* create scanner on input string */
+        val sc = Scanner(consts.IN1)
+        /* read in the dimensions */
+        shape.scanDimensionsFrom(sc, nullOut)
+        /* compare to expected */
+        assertEquals(consts.DIMENSIONS1, shape.dimensionsToString())
+    }
+
+    /**
+     * Tests scanDimensionsFrom with a irregular square.
+     */
+    @Test
+    fun testScanDimensions2(){
+        /* create the square */
+        val shape : Shape = Square(consts.NAME)
+        /* create scanner on input string */
+        val sc = Scanner(consts.IN2)
+        /* read in the dimensions */
+        shape.scanDimensionsFrom(sc, nullOut)
+        /* compare to expected */
+        assertEquals(consts.DIMENSIONS2, shape.dimensionsToString())
+    }
 
 } /* end class TbSquare */
 
@@ -38,16 +57,23 @@ class TbSquare{
 object TbSquareConsts{
     /** test square name */
     const val NAME = "square ABCD"
+
     /** length and height of test regular square */
     const val LENGTH1 = 10.0
     const val HEIGHT1 = 10.0
+    /** input for test regular square */
+    const val IN1 = "${LENGTH1} ${HEIGHT1}"
     /** expected string representation of test regular square's
      * dimensions */
     const val DIMENSIONS1 = "length = 1.0000e+01, height = 1.0000e+01"
+
     /** length and height of test irregular square */
     const val LENGTH2 = 8.0
     const val HEIGHT2 = 12.0
+    /** input for test irregular square */
+    const val IN2 = "${LENGTH2} ${HEIGHT2}"
     /** expected string representation of test irregular square's
      * dimensions */
     const val DIMENSIONS2 = "length = 8.0000e+00, height = 1.2000e+01"
+
 } /* end object TbSquareConsts */
