@@ -62,7 +62,7 @@ open class Triangle: Shape{
     } /* end fun getSide(index : Int) : Double */
 
     /**
-     * Represents the dimensions of this circle as a string.
+     * Represents the dimensions of this triangle as a string.
      * @return the string representation
      */
     override fun dimensionsToString() : String{
