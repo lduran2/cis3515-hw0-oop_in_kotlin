@@ -8,6 +8,9 @@ CHANGELOG :
     v5.0.0 - 2022-09-11t01:39Q
         [Main] created instances of Shape classes (nameless)
 
+    v4.5.0.1 - 2022-09-10t18:01Q
+        [tests] shared constant objects
+
     v4.3.-8 - 2022-09-11t12:21Q
         [tests] added .gitignore
 
