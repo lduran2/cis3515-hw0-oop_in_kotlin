@@ -2,6 +2,21 @@ CHANGELOG :
     v5.0.0 - 2022-09-11t01:39Q
         [Main] created instances of Shape classes (nameless)
 
+    v4.2.0 - 2022-09-09t23:53Q
+        [implements] setDimensions: EquilateralTriangle
+
+    v4.1.0 - 2022-09-09t23:17Q
+        [implements] setDimensions: square, circle, triangle
+
+    v4.0.1 - 2022-09-09t18:52Q
+        [implements] ctor for equilateral
+
+    v4.0.0 - 2022-09-09t18:40Q
+        [implements] ctors for child classes
+
+    v3.0.0 - 2022-09-09t18:26Q
+        [print_dimensions] implemented
+
     v2.2.1 - 2022-09-09t18:43Q
         [subclass] equilateral extends triangle
 
