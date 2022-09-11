@@ -10,4 +10,21 @@ import kotlin.test.assertEquals
  */
 class TbSquare{
 
+    /**
+     * Always fails.
+     */
+    @Test
+    fun fail(){
+        assertEquals(false, true)
+    } /* end fun fail() */
+
+    /**
+     * Greets and passes.
+     */
+    @Test
+    fun pass(){
+        print("Hello world!")
+        assertEquals(true, true)
+    } /* end fun fail() */
+
 } /* end class TbSquare */
