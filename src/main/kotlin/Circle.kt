@@ -34,8 +34,8 @@ class Circle (_name : String): Shape(_name){
     } /* end fun dimensionsToString() */
 
     /**
-     * Calculates the area of this square.
-     * @return the area of this square
+     * Calculates the area of this circle.
+     * @return the area of this circle
      */
     override fun getArea(): Double{
         return (PI * this.radius * this.radius)
