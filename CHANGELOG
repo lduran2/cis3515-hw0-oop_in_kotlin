@@ -11,9 +11,6 @@ CHANGELOG :
     v4.6.0 - 2022-09-10t21:07Q
         [tests] tb for Square.getArea
 
-    v4.5.3 - 2022-09-10t18:29Q
-        [tests] empty implementation Shape.dimensionsToString()
-
     v4.5.2 - 2022-09-10t18:15Q
         [tests] vacuous shape tests
 
@@ -43,6 +40,9 @@ CHANGELOG :
 
     v4.0.0 - 2022-09-09t18:40Q
         [implements] ctors for child classes
+
+    v3.1.1-tests_4.5.3 - 2022-09-10t18:29Q (originally 2022-09-10t18:29Q)
+        [print_dimensions] Shape: dimensionsToString, getArea: open empty implementations
 
     v3.1.0 - 2022-09-10t15:04Q
         [print_dimensions] added dimensionsToString
