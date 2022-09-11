@@ -62,7 +62,7 @@ open class Triangle: Shape{
     } /* end fun getSide(index : Int) : Double */
 
     /**
-     * Represents the dimensions of this circle as a string.
+     * Represents the dimensions of this triangle as a string.
      * @return the string representation
      */
     override fun dimensionsToString() : String{
@@ -133,7 +133,7 @@ open class Triangle: Shape{
 
         /* get each side */
         for (i in 1..TriangleConsts.N_SIDES){
-            out.print("\tEnter length: ")
+            out.print("\tEnter side #${i}: ")
             sides[i] = sc.nextDouble()
         } /* for (1..TriangleConsts.N_SIDES) */
 
