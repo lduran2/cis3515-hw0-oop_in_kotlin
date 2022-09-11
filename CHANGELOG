@@ -1,6 +1,36 @@
 CHANGELOG :
+    v4.6.3 - 2022-09-10t21:35Q
+        [tests] tb for Triangle.getPerimeter
+
+    v4.6.2 - 2022-09-10t21:35Q
+        [tests] tb getArea for all shapes
+
+    v4.6.1 - 2022-09-10t21:16Q
+        [tests] tb for Circle.getArea
+
+    v4.6.0 - 2022-09-10t21:07Q
+        [tests] tb for Square.getArea
+
+    v4.5.2 - 2022-09-10t18:15Q
+        [tests] vacuous shape tests
+
+    v4.5.1 - 2022-09-10t18:01Q
+        [tests] consts mv -> object
+
     v4.5.0.1 - 2022-09-10t18:01Q
         [tests] shared constant objects
+
+    v4.5.0 - 2022-09-10t17:23Q
+        [tests] tb for equilateral triangle.dimensions
+
+    v4.4.0 - 2022-09-10t17:01Q
+        [tests] tb for triangle.dimensions, fix TbCircle
+
+    v4.3.1 - 2022-09-10t16:34Q
+        [tests] tb for circle.dimensions, fix TbSquare
+
+    v4.3.0 - 2022-09-10t16:07Q
+        [tests] testbench for square, up to dimensions
 
     v4.3.-8 - 2022-09-11t12:21Q
         [tests] added .gitignore
@@ -14,6 +44,48 @@ CHANGELOG :
 
     v4.3.-10 - 2022-09-11t12:02Q
         [tests] empty common classes for test benches
+
+    v4.2.0 - 2022-09-09t23:53Q
+        [implements] setDimensions: EquilateralTriangle
+
+    v4.1.0 - 2022-09-09t23:17Q
+        [implements] setDimensions: square, circle, triangle
+
+    v4.0.1 - 2022-09-09t18:52Q
+        [implements] ctor for equilateral
+
+    v4.0.0 - 2022-09-09t18:40Q
+        [implements] ctors for child classes
+
+    v3.1.1-tests_4.5.3 - 2022-09-10t18:29Q (originally 2022-09-10t18:29Q)
+        [print_dimensions] Shape: dimensionsToString, getArea: open empty implementations
+
+    v3.1.0 - 2022-09-10t15:04Q
+        [print_dimensions] added dimensionsToString
+
+    v3.0.0 - 2022-09-09t18:26Q
+        [print_dimensions] added printDimensions
+
+    v2.2.1 - 2022-09-09t18:43Q
+        [subclass] equilateral extends triangle
+
+    v2.2.0 - 2022-09-09t17:25Q
+        [subclass] equilateral triangle, standard space, square doc
+
+    v2.1.0 - 2022-09-09t17:19Q
+        [subclass] circle, triangle
+
+    v2.0.1 - 2022-09-09t15:46Q
+        [subclass] square default name constructor
+
+    v2.0.0 - 2022-09-09t15:42Q
+        [subclass] started square
+
+    v1.1.1 - 2022-09-09t15:52Q
+        [shape] abstract class
+
+    v1.1.0 - 2022-09-06t01:06Q
+        [shape] implemented shape
 
     v1.0-SNAPSHOT - 2022-09-06t00:51Q
         started project
