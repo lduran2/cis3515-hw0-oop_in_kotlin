@@ -1,4 +1,13 @@
 CHANGELOG :
+    v5.2.2 - 2022-09-11t16:07Q
+        [tests_scan] for triangle
+
+    v5.2.1 - 2022-09-11t16:02Q
+        [tests_scan] for circle
+
+    v5.2.0 - 2022-09-11t14:34Q
+        [tests_scan] for square
+
     v5.1.0 - 2022-09-11t13:11Q
         [Main] empty Shape.scanDimensionsFrom
 
