@@ -41,6 +41,9 @@ CHANGELOG :
     v4.5.1 - 2022-09-10t18:01Q
         [tests] consts mv -> object
 
+    v4.5.0.1 - 2022-09-10t18:01Q
+        [tests] shared constant objects
+
     v4.5.0 - 2022-09-10t17:23Q
         [tests] tb for equilateral triangle.dimensions
 
@@ -52,6 +55,9 @@ CHANGELOG :
 
     v4.3.0 - 2022-09-10t16:07Q
         [tests] testbench for square, up to dimensions
+
+    v4.3.-8 - 2022-09-11t12:21Q
+        [tests] added .gitignore
 
     v4.3.-8 - 2022-09-11t12:21Q
         [tests] added .gitignore
