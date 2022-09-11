@@ -10,6 +10,9 @@ import kotlin.test.assertEquals
  */
 class TbSquare{
 
+    /** the object holding the testing constants */
+    private val consts = TbSquareConsts
+
     /**
      * Always fails.
      */
