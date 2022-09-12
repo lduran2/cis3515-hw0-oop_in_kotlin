@@ -32,6 +32,33 @@ CHANGELOG :
     v5.0.0 - 2022-09-11t01:39Q
         [Main] created instances of Shape classes (nameless)
 
+    v4.8.0 - 2022-09-11t19:49Q
+        [implements] triangle.dimsToStr using joinToString
+
+    v4.7.3 - 2022-09-11t00:03Q
+        [implements] triangle passes getArea
+
+    v4.7.2 - 2022-09-10t23:21Q
+        [implements] triangle passes getPerimeter
+
+    v4.7.1 - 2022-09-10t22:30Q
+        [implements] circle passes getArea
+
+    v4.7.0 - 2022-09-10t22:16Q
+        [implements] square passes getArea
+
+    v4.6.3 - 2022-09-10t21:35Q
+        [tests] tb for Triangle.getPerimeter
+
+    v4.6.2 - 2022-09-10t21:35Q
+        [tests] tb getArea for all shapes
+
+    v4.6.1 - 2022-09-10t21:16Q
+        [tests] tb for Circle.getArea
+
+    v4.6.0 - 2022-09-10t21:07Q
+        [tests] tb for Square.getArea
+
     v4.5.6 - 2022-09-10t20:43Q
         [implements] triangle, equilateral passes name, dimensions tests
 
@@ -87,8 +114,8 @@ CHANGELOG :
     v4.0.0 - 2022-09-09t18:40Q
         [implements] ctors for child classes
 
-    v3.1.1-tests_4.5.3 - 2022-09-10t18:29Q
-        [print_dimensions] dimensionsToString, getArea: open empty impl'ns
+    v3.1.1-tests_4.5.3 - 2022-09-10t18:29Q (originally 2022-09-10t18:29Q)
+        [print_dimensions] Shape: dimensionsToString, getArea: open empty implementations
 
     v3.1.0 - 2022-09-10t15:04Q
         [print_dimensions] added dimensionsToString

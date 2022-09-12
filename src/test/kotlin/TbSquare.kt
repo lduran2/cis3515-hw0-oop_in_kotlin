@@ -118,6 +118,51 @@ class TbSquare{
         assertEquals(consts.DIMENSIONS2, shape.dimensionsToString())
     } /* end fun testScanDimensions2() */
 
+    /**
+     * Tests the area calculation of a vacuous square.
+     */
+    @Test
+    fun testArea0(){
+        /* create a square */
+        val square = Square(consts.NAME)
+        /* set the initial dimensions */
+        square.setDimensions(consts.LENGTH0, consts.HEIGHT0)
+        /* calculate the area */
+        val area = square.getArea()
+        /* check against the expected value */
+        assertEquals(consts.AREA0, area, consts.ABSOLUTE_TOLERANCE)
+    } /* end fun testArea0() */
+
+    /**
+     * Tests the area calculation of a regular square.
+     */
+    @Test
+    fun testArea1(){
+        /* create a square */
+        val square = Square(consts.NAME)
+        /* set the initial dimensions */
+        square.setDimensions(consts.LENGTH1, consts.HEIGHT1)
+        /* calculate the area */
+        val area = square.getArea()
+        /* check against the expected value */
+        assertEquals(consts.AREA1, area, consts.ABSOLUTE_TOLERANCE)
+    } /* end fun testArea1() */
+
+    /**
+     * Tests the area calculation of an irregular square.
+     */
+    @Test
+    fun testArea2(){
+        /* create a square */
+        val square = Square(consts.NAME)
+        /* set the initial dimensions */
+        square.setDimensions(consts.LENGTH2, consts.HEIGHT2)
+        /* calculate the area */
+        val area = square.getArea()
+        /* check against the expected value */
+        assertEquals(consts.AREA2, area, consts.ABSOLUTE_TOLERANCE)
+    } /* end fun testArea2() */
+
 } /* end class TbSquare */
 
 /**
@@ -133,6 +178,8 @@ object TbSquareConsts{
     /** expected string representation of test vacuous square's
      * dimensions */
     const val DIMENSIONS0 = "length = 0.0000e+00, height = 0.0000e+00"
+    /** expected area of vacuous square */
+    const val AREA0 = 0.0
 
     /** length and height of test regular square */
     const val LENGTH1 = 10.0
@@ -142,6 +189,8 @@ object TbSquareConsts{
     /** expected string representation of test regular square's
      * dimensions */
     const val DIMENSIONS1 = "length = 1.0000e+01, height = 1.0000e+01"
+    /** expected area of regular square */
+    const val AREA1 = 100.0
 
     /** length and height of test irregular square */
     const val LENGTH2 = 8.0
@@ -151,5 +200,10 @@ object TbSquareConsts{
     /** expected string representation of test irregular square's
      * dimensions */
     const val DIMENSIONS2 = "length = 8.0000e+00, height = 1.2000e+01"
+    /** expected area of irregular square */
+    const val AREA2 = 96.0
+
+    /** the maximum allowable difference between calculated areas */
+    const val ABSOLUTE_TOLERANCE = 0.00005
 
 } /* end object TbSquareConsts */

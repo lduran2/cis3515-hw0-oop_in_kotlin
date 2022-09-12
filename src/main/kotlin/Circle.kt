@@ -1,6 +1,8 @@
 import java.util.Scanner
 import java.io.PrintWriter
 
+import kotlin.math.PI
+
 /**
  * Canonical : https://github.com/lduran2/cis3515-hw0-oop_in_kotlin/blob/dev/src/main/kotlin/Circle.kt
  * A shape consisting of all equidistant points from a central point.
@@ -51,5 +53,14 @@ class Circle (_name : String): Shape(_name){
         /* update the dimensions */
         this.setDimensions(radius)
     } /* end fun scanDimensionsFrom(sc : Scanner, out : PrintWriter) */
+
+
+    /**
+     * Calculates the area of this circle.
+     * @return the area of this circle
+     */
+    override fun getArea(): Double{
+        return (PI * this.radius * this.radius)
+    } /* end class getArea() */
 
 } /* end class Circle */

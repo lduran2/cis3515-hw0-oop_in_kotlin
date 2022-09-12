@@ -67,4 +67,12 @@ class Square (_name : String): Shape(_name){
         this.setDimensions(length, height)
     } /* end fun scanDimensionsFrom(sc : Scanner, out : PrintWriter) */
 
+    /**
+     * Calculates the area of this square.
+     * @return the area of this square
+     */
+    override fun getArea(): Double{
+        return (this.length * this.height)
+    } /* end class getArea() */
+
 } /* end class Square */

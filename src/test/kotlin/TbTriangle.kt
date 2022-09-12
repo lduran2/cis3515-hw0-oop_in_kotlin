@@ -130,6 +130,117 @@ class TbTriangle{
         assertEquals(consts.DIMENSIONS345, shape.dimensionsToString())
     } /* end fun testScanDimensions345() */
 
+    /**
+     * Tests the perimeter calculation of the vacuous triangle.
+     */
+    @Test
+    fun testPerimeter0(){
+        /* create a triangle */
+        val triangle = Triangle(consts.NAME)
+        /* set the initial dimensions */
+        triangle.setDimensions(
+            consts.SIDES0[0],
+            consts.SIDES0[1],
+            consts.SIDES0[2])
+        /* calculate the perimeter */
+        val perimeter = triangle.getPerimeter()
+        /* check against the expected value */
+        assertEquals(consts.PERIMETER0, perimeter, consts.ABSOLUTE_TOLERANCE
+            )
+    } /* end fun testPerimeter0() */
+
+    /**
+     * Tests the perimeter calculation of the regular triangle.
+     */
+    @Test
+    fun testPerimeter1(){
+        /* create a triangle */
+        val triangle = Triangle(consts.NAME)
+        /* set the initial dimensions */
+        triangle.setDimensions(
+            consts.SIDES1[0],
+            consts.SIDES1[1],
+            consts.SIDES1[2])
+        /* calculate the perimeter */
+        val perimeter = triangle.getPerimeter()
+        /* check against the expected value */
+        assertEquals(consts.PERIMETER1, perimeter, consts.ABSOLUTE_TOLERANCE
+        )
+    } /* end fun testPerimeter1() */
+
+    /**
+     * Tests the perimeter calculation of the 3-4-5 triangle.
+     */
+    @Test
+    fun testPerimeter345(){
+        /* create a triangle */
+        val triangle = Triangle(consts.NAME)
+        /* set the initial dimensions */
+        triangle.setDimensions(
+            consts.SIDES345[0],
+            consts.SIDES345[1],
+            consts.SIDES345[2])
+        /* calculate the perimeter */
+        val perimeter = triangle.getPerimeter()
+        /* check against the expected value */
+        assertEquals(consts.PERIMETER345, perimeter, consts.ABSOLUTE_TOLERANCE
+        )
+    } /* end fun testPerimeter1() */
+
+    /**
+     * Tests the area calculation of the vacuous triangle.
+     */
+    @Test
+    fun testArea0(){
+        /* create a triangle */
+        val triangle = Triangle(consts.NAME)
+        /* set the initial dimensions */
+        triangle.setDimensions(
+            consts.SIDES0[0],
+            consts.SIDES0[1],
+            consts.SIDES0[2])
+        /* calculate the area */
+        val area = triangle.getArea()
+        /* check against the expected value */
+        assertEquals(consts.AREA0, area, consts.ABSOLUTE_TOLERANCE)
+    } /* end fun testArea0() */
+
+    /**
+     * Tests the area calculation of the regular triangle.
+     */
+    @Test
+    fun testArea1(){
+        /* create a triangle */
+        val triangle = Triangle(consts.NAME)
+        /* set the initial dimensions */
+        triangle.setDimensions(
+            consts.SIDES1[0],
+            consts.SIDES1[1],
+            consts.SIDES1[2])
+        /* calculate the area */
+        val area = triangle.getArea()
+        /* check against the expected value */
+        assertEquals(consts.AREA1, area, consts.ABSOLUTE_TOLERANCE)
+    } /* end fun testArea0() */
+
+    /**
+     * Tests the area calculation of the 3-4-5 triangle.
+     */
+    @Test
+    fun testArea365(){
+        /* create a triangle */
+        val triangle = Triangle(consts.NAME)
+        /* set the initial dimensions */
+        triangle.setDimensions(
+            consts.SIDES345[0],
+            consts.SIDES345[1],
+            consts.SIDES345[2])
+        /* calculate the area */
+        val area = triangle.getArea()
+        /* check against the expected value */
+        assertEquals(consts.AREA345, area, consts.ABSOLUTE_TOLERANCE)
+    } /* end fun testArea0() */
+
 } /* end class TbTriangle */
 
 /**
@@ -144,6 +255,10 @@ object TbTriangleConsts{
     /** expected string representation of test vacuous triangle */
     const val DIMENSIONS0 =
         "side #1 = 0.0000e+00, side #2 = 0.0000e+00, side #3 = 0.0000e+00"
+    /** expected perimeter of test vacuous triangle */
+    const val PERIMETER0 = 0.0
+    /** expected area of test vacuous triangle */
+    const val AREA0 = 0.0
 
     /** sides of a test regular triangle */
     val SIDES1 = doubleArrayOf(1.0, 1.0, 1.0)
@@ -152,6 +267,10 @@ object TbTriangleConsts{
     /** expected string representation of test regular triangle */
     const val DIMENSIONS1 =
         "side #1 = 1.0000e+00, side #2 = 1.0000e+00, side #3 = 1.0000e+00"
+    /** expected perimeter of test regular triangle */
+    const val PERIMETER1 = 3.0
+    /** expected area of test regular triangle */
+    const val AREA1 = 4.3301e-01
 
     /** sides of the 3-4-5 triangle */
     val SIDES345 = doubleArrayOf(3.0, 4.0, 5.0)
@@ -160,5 +279,12 @@ object TbTriangleConsts{
     /** expected string representation of the 3-4-5 triangle */
     const val DIMENSIONS345 =
         "side #1 = 3.0000e+00, side #2 = 4.0000e+00, side #3 = 5.0000e+00"
+    /** expected perimeter of the 3-4-5 triangle */
+    const val PERIMETER345 = 12.0
+    /** expected area of the 3-4-5 triangle */
+    const val AREA345 = 6.0000
+
+    /** the maximum allowable difference between calculated areas */
+    const val ABSOLUTE_TOLERANCE = 0.00005
 
 } /* end object TbTriangleConsts */

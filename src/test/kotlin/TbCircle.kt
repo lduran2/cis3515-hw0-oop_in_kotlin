@@ -62,7 +62,7 @@ class TbCircle{
 
     /**
      * Tests the dimension mutator and `dimensionsToString` of a
-     * circle.
+     * unit circle.
      */
     @Test
     fun testDimensions1(){
@@ -120,6 +120,51 @@ class TbCircle{
         assertEquals(consts.DIMENSIONS2, shape.dimensionsToString())
     } /* end fun testScanDimensions1() */
 
+    /**
+     * Tests the area calculation of a vacuous circle.
+     */
+    @Test
+    fun testArea0(){
+        /* create a circle */
+        val circle = Circle(consts.NAME)
+        /* set the initial dimensions */
+        circle.setDimensions(consts.RADIUS0)
+        /* calculate the area */
+        val area = circle.getArea()
+        /* check against the expected value */
+        assertEquals(consts.AREA0, area, consts.ABSOLUTE_TOLERANCE)
+    } /* end fun testArea0() */
+
+    /**
+     * Tests the area calculation of a unit circle.
+     */
+    @Test
+    fun testArea1(){
+        /* create a circle */
+        val circle = Circle(consts.NAME)
+        /* set the initial dimensions */
+        circle.setDimensions(consts.RADIUS1)
+        /* calculate the area */
+        val area = circle.getArea()
+        /* check against the expected value */
+        assertEquals(consts.AREA1, area, consts.ABSOLUTE_TOLERANCE)
+    } /* end fun testArea0() */
+
+    /**
+     * Tests the area calculation of another circle.
+     */
+    @Test
+    fun testArea2(){
+        /* create a circle */
+        val circle = Circle(consts.NAME)
+        /* set the initial dimensions */
+        circle.setDimensions(consts.RADIUS2)
+        /* calculate the area */
+        val area = circle.getArea()
+        /* check against the expected value */
+        assertEquals(consts.AREA2, area, consts.ABSOLUTE_TOLERANCE)
+    } /* end fun testArea0() */
+
 } /* end class TbCircle */
 
 /**
@@ -133,6 +178,8 @@ object TbCircleConsts{
     const val RADIUS0 = 0.0
     /** expected string representation of test vacuous circle */
     const val DIMENSIONS0 = "radius = 0.0000e+00"
+    /** expected area of test vacuous circle */
+    const val AREA0 = 0.0
 
     /** radius of test unit circle */
     const val RADIUS1 = 1.0
@@ -140,6 +187,8 @@ object TbCircleConsts{
     const val IN1 = "${RADIUS1}"
     /** expected string representation of test unit circle */
     const val DIMENSIONS1 = "radius = 1.0000e+00"
+    /** expected area of test unit circle */
+    const val AREA1 = 3.1416
 
     /** radius of another test circle */
     val RADIUS2 = pow(PI, (-1.0/2.0))
@@ -147,5 +196,10 @@ object TbCircleConsts{
     val IN2 = "${RADIUS2}"
     /** expected string representation of another test circle */
     const val DIMENSIONS2 = "radius = 5.6419e-01"
+    /** expected area of another test circle */
+    const val AREA2 = 1.0000
+
+    /** the maximum allowable difference between calculated areas */
+    const val ABSOLUTE_TOLERANCE = 0.00005
 
 } /* end object TbCircleConsts */
