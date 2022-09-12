@@ -44,6 +44,9 @@ fun inputDimensionsFor(shapes : Iterable<Shape>){
     for (shape in shapes){
         /* use input to update the shapes' dimensions */
         shape.scanDimensionsFrom(sc, err)
+        /* shape separator */
+        err.print("\n")
+        err.flush()
     } /* end for (shape in shapes) */
 } /* end fun inputDimensionsFor(shapes : Iterable<Shape>) */
 
@@ -62,6 +65,8 @@ fun describeShapes(shapes : Iterable<Shape>){
         print("    \t+ dimensions: ")
         shape.printDimensions()
         print('\n')
+        /* print the area of the shape*/
+        print("    \t+ area: ${"%.4e".format(shape.getArea())}\n")
         /* shape separator */
         print("\n")
     } /* end for ((i, shape) in shapes.withIndex()) */
