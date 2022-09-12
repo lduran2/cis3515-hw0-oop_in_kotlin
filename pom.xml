@@ -6,7 +6,7 @@
 
     <artifactId>cis3515-hw0-oop_in_kotlin</artifactId>
     <groupId>edu.temple.tuh24865</groupId>
-    <version>4.7.3</version>
+    <version>5.4.0</version>
     <packaging>jar</packaging>
 
     <name>consoleApp</name>
@@ -69,6 +69,14 @@
                     <mainClass>MainKt</mainClass>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>11</source>
+                    <target>11</target>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 
@@ -99,6 +107,12 @@
             <groupId>org.jetbrains.kotlin</groupId>
             <artifactId>kotlin-test</artifactId>
             <version>${kotlin.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-test</artifactId>
+            <version>RELEASE</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
