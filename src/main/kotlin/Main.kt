@@ -12,7 +12,9 @@ import java.io.PrintWriter
  */
 fun main(args: Array<String>){
     val shapes = createShapes()     /* shapes to manipulate */
-    inputDimensionsFor(shapes)       /* input their dimensions */
+    inputDimensionsFor(shapes)      /* input their dimensions */
+    print("\n")                     /* blank space */
+    describeShapes(shapes)          /* print a description of each shape */
 } /* end fun main(args: Array<String>)*/
 
 /**
@@ -44,3 +46,18 @@ fun inputDimensionsFor(shapes : Iterable<Shape>){
         shape.scanDimensionsFrom(sc, err)
     } /* end for (shape in shapes) */
 } /* end fun inputDimensionsFor(shapes : Iterable<Shape>) */
+
+/**
+ * Prints a description of each shape.
+ * @param shapes : Iterable<Shape> = to describe
+ */
+fun describeShapes(shapes : Iterable<Shape>){
+    /* for each shape */
+    for ((i, shape) in shapes.withIndex()){
+        /* print the index of this shape */
+        print("${"%3d".format(i + 1)}. ")
+        /* print the name of the shape */
+        print("${shape.name}")
+        print("\n")
+    }
+} /* end fun describeShapes(shape : Iterable<Shapes>) */
