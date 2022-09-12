@@ -1,3 +1,6 @@
+import java.util.Scanner
+import java.io.PrintWriter
+
 import kotlin.math.sqrt
 
 /**
@@ -73,6 +76,28 @@ open class Triangle: Shape{
             .joinToString(", ")
         ;
     } /* end fun dimensionsToString() */
+
+    /**
+     * Prints a prompt for each side, scanning them from input.
+     * @param sc : Scanner = from which to scan new dimensions
+     * @param out : PrintWriter = to which to print prompts for input
+     */
+    override fun scanDimensionsFrom(sc : Scanner, out : PrintWriter){
+        /* all sides of the triangle, 1-indexed */
+        val sides = DoubleArray(TriangleConsts.N_SIDES + 1)
+        /* header */
+        out.print("For ${name}:\n")
+
+        /* get each side */
+        for (i in 1..TriangleConsts.N_SIDES){
+            out.print("\tEnter side #${i}: ")
+            out.flush()
+            sides[i] = sc.nextDouble()
+        } /* end for (i in 1..TriangleConsts.N_SIDES) */
+
+        /* update the dimensions */
+        this.setDimensions(sides[1], sides[2], sides[3])
+    } /* end fun scanDimensionsFrom(sc : Scanner, out : PrintWriter) */
 
     /**
      * Finds the area of this triangle.

@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="cis3515-hw0-oop_in_kotlin" target="1.5" />
+      <module name="cis3515-hw0-oop_in_kotlin" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>
