@@ -57,7 +57,12 @@ fun describeShapes(shapes : Iterable<Shape>){
         /* print the index of this shape */
         print("${"%3d".format(i + 1)}. ")
         /* print the name of the shape */
-        print("${shape.name}")
+        print("${shape.name}\n")
+        /* print the dimensions of the shape */
+        print("    \t+ dimensions: ")
+        shape.printDimensions()
+        print('\n')
+        /* shape separator */
         print("\n")
-    }
+    } /* end for ((i, shape) in shapes.withIndex()) */
 } /* end fun describeShapes(shape : Iterable<Shapes>) */
