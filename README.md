@@ -42,3 +42,9 @@ Builds a list of shape objects, allows the user to change its dimensions, and th
 1. Tests the `setDimensions` and `dimensionsToString` (intermediate output for `printDimensions`) methods given a vacuous triangle and 2 other different
 equilateral triangles.
 1. Tests the `scanDimensionsFrom` method simulating user input for 2 different equilateral triangles.
+
+## Dependencies 
+
+* [JUnit5](https://github.com/junit-team/junit5): `com.bluecatcode.junit:junit-4.10-extended:1.0.4`
+* [`kotlin.test.assertEquals`](https://kotlinlang.org/api/latest/kotlin.test/kotlin.test/assert-equals.html)
+* [JDK >= 11](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/OutputStream.html#nullOutputStream())
